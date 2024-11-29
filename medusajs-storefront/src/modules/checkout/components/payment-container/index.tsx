@@ -7,6 +7,7 @@ import React from "react"
 import Radio from "@modules/common/components/radio"
 
 import PaymentTest from "../payment-test"
+import PaymentCash from "../payment-cash"
 
 type PaymentContainerProps = {
   paymentSession: PaymentSession
@@ -38,7 +39,7 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
         )}
       >
         <div className="flex items-center justify-between ">
-          <div className="flex items-center gap-x-4">
+          <div className="flex items-center gap-x-2 lg:gap-x-4">
             <Radio
               checked={selectedPaymentOptionId === paymentSession.provider_id}
             />
@@ -59,14 +60,33 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
             {paymentSession.provider_id === "manual" && isDevelopment && (
               <PaymentTest className="hidden small:block" />
             )}
+            {paymentSession.provider_id === "Efectivo" && (
+              <PaymentCash className="hidden small:block" />
+            )}
+            {paymentSession.provider_id === "Transferencia Bancaria" && (
+              <PaymentCash className="hidden small:block" />
+            )}
+            {paymentSession.provider_id === "mercadopago" && (
+              <PaymentTest className="hidden small:block" />
+            )}
+
+            {paymentSession.provider_id === "manual" && isDevelopment && (
+              <PaymentTest className="small:hidden text-[10px]" />
+            )}
+            {paymentSession.provider_id === "Efectivo" && (
+              <PaymentCash className="small:hidden w-fit text-[10px]" />
+            )}
+            {paymentSession.provider_id === "Transferencia Bancaria" && (
+              <PaymentCash className="small:hidden w-fit text-[10px]" />
+            )}
+            {paymentSession.provider_id === "mercadopago" && (
+              <PaymentTest className="small:hidden w-fit text-[10px]" />
+            )}
           </div>
           <span className="justify-self-end text-ui-fg-base">
             {paymentInfoMap[paymentSession.provider_id]?.icon}
           </span>
         </div>
-        {paymentSession.provider_id === "manual" && isDevelopment && (
-          <PaymentTest className="small:hidden text-[10px]" />
-        )}
       </RadioGroup.Option>
     </>
   )
