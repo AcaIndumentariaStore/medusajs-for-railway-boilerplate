@@ -218,7 +218,7 @@ const Payment = ({
                   <Text className="mb-1">
                     <strong>Realizá tu pedido: </strong>Selecciona los productos
                     que deseas y finaliza tu compra eligiendo la opción de pago
-                    "Efectivo".
+                    Efectivo.
                   </Text>
                   <Text className="mb-1">
                     <strong>Confirma tu pedido:</strong>Recibirás un mensaje con
@@ -241,7 +241,7 @@ const Payment = ({
                   <Text className="mb-1">
                     <strong>Realizá tu pedido: </strong>Seleccioná los productos
                     que deseas y finaliza tu compra. Al elegir la opción de pago
-                    "Transferencia", luego de realizar la compra podras ver los
+                    Transferencia, luego de realizar la compra podras ver los
                     datos bancarios para realizar el depósito.
                   </Text>
                   <Text className="mb-1">
@@ -258,7 +258,7 @@ const Payment = ({
               </div>
             )}
 
-            {isBankTransfer && (
+            {isMercadoPago && (
               <div className="mt-5 transition-all duration-150 ease-in-out">
                 <div className="border p-4 rounded-md">
                   <Text className="txt-medium-plus text-ui-fg-base mb-3">
