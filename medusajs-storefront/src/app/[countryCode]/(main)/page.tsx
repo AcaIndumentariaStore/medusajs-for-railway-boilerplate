@@ -8,10 +8,11 @@ import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Aca Indumentaria | ¡Encontrá tu estilo con nosotros!",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
-}
+    "Descubrí en Aca Indumentaria una amplia variedad de calzado infantil, zapatillas, sandalias, botas, texanas y borcegos de cuero. Además, ofrecemos prendas de vestir como buzos, sacos de lana y ropa de dormir para toda la familia.",
+};
+
 
 const getCollectionsWithProducts = cache(
   async (
