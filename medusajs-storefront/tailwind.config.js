@@ -33,6 +33,10 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+        "aca-beige": "#fff9f8",
+        "aca-green": "#a2d1ad",
+        "aca-strong-green": "#a0b4a4",
+        "aca-grey": "#4b4b4b",
       },
       borderRadius: {
         none: "0px",
@@ -157,5 +161,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-radix")()],
+  plugins: [
+    require("tailwindcss-radix"),
+    require('tailwind-scrollbar'),
+  ],
 }

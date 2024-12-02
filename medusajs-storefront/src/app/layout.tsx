@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-mode="light">
+    <html lang="es" data-mode="light">
       <body>
-        <main className="relative">{props.children}</main>
+        <main className="relative scrollbar-thin scrollbar-thumb-[#a2d1ad] scrollbar-track-transparent overflow-y-scroll h-screen">{props.children}</main>
       </body>
     </html>
   )
