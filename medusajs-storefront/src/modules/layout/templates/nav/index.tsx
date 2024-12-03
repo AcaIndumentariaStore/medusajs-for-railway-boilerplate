@@ -100,7 +100,7 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "Inicio", href: "#" },
+    { name: "Inicio", href: "/" },
     { name: "Tienda", href: "#" },
   ],
 }
@@ -131,138 +131,6 @@ export default async function Nav() {
                 height={40}
               />
             </LocalizedClientLink>
-
-            {/* <div className="hidden lg:flex lg:gap-x-12 mx-12">
-              <a
-                href="/"
-                className="flex items-center gap-x-1 text-sm/6 font-semibold text-aca-grey hover:text-gray-900"
-              >
-                Inicio
-              </a>
-
-              <a
-                href="/"
-                className="text-sm/6 font-semibold text-aca-grey hover:text-gray-900"
-              >
-                Tienda
-              </a>
-
-              <Popover className="relative">
-                <PopoverButton className="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-aca-grey hover:text-gray-900">
-                  <span>Prendas</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="16"
-                    height="16"
-                    color="#4b4b4b"
-                    fill="none"
-                  >
-                    <path
-                      d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <ChevronDownIcon aria-hidden="true" className="size-5" />
-                </PopoverButton>
-
-                <PopoverPanel
-                  transition
-                  className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-                >
-                  <div className="w-screen max-w-xl flex-auto overflow-hidden bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
-                    <h3 className="pt-4 pb-2 pl-4 font-semibold text-lg text-gray-900">
-                      Prendas de Vestir
-                    </h3>
-                    <hr className="mx-4" />
-                    <div className="grid grid-cols-2 p-4">
-                      <div className="flex flex-col items-start justify-start">
-                        <h3 className="font-medium">Ropa - Pijamas Verano</h3>
-                        {PrendasVerano.map((item) => (
-                          <div
-                            key={item.name}
-                            className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
-                          >
-                            <div className="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                              <Image
-                                src={item.image}
-                                width={50}
-                                height={50}
-                                alt=""
-                                className="rounded-md"
-                              />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                              <a
-                                href={item.href}
-                                className="font-semibold text-gray-900"
-                              >
-                                {item.name}
-                                <span className="absolute inset-0" />
-                              </a>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      <div className="flex flex-col items-start justify-start border-l">
-                        <h3 className="font-medium">Ropa Invierno</h3>
-                        {PrendasInvierno.map((item) => (
-                          <div
-                            key={item.name}
-                            className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
-                          >
-                            <div className="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                              <Image
-                                src={item.image}
-                                width={50}
-                                height={50}
-                                alt=""
-                                className="rounded-md"
-                              />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                              <a
-                                href={item.href}
-                                className="font-semibold text-gray-900"
-                              >
-                                {item.name}
-                                <span className="absolute inset-0" />
-                              </a>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </PopoverPanel>
-              </Popover>
-
-              <a
-                href="#"
-                className="flex items-center gap-x-1 text-sm/6 font-semibold text-aca-grey hover:text-gray-900"
-              >
-                Calzado
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
-                  color="#4b4b4b"
-                  fill="none"
-                >
-                  <path
-                    d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </div> */}
 
             <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
               <div className="flex h-full space-x-8">

@@ -177,9 +177,9 @@ export default async function Footer() {
               </span>
               <ul className="grid grid-cols-3 gap-4">
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
-                  <LocalizedClientLink
+                  <a
                     className="flex justify-center items-center bg-aca-green p-2 rounded-full"
-                    href={`/categories/`}
+                    href={`https://api.whatsapp.com/message/GV5YHAXA4U2IK1?autoload=1&app_absent=0`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -203,12 +203,12 @@ export default async function Footer() {
                         stroke-linejoin="round"
                       />
                     </svg>
-                  </LocalizedClientLink>
+                  </a>
                 </li>
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
-                  <LocalizedClientLink
+                  <a
                     className="flex justify-center items-center bg-aca-green p-2 rounded-full"
-                    href={`/categories/`}
+                    href={`https://www.instagram.com/aca.indumentaria`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -237,12 +237,12 @@ export default async function Footer() {
                         stroke-linejoin="round"
                       />
                     </svg>
-                  </LocalizedClientLink>
+                  </a>
                 </li>
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
-                  <LocalizedClientLink
+                  <a
                     className="flex justify-center items-center bg-aca-green p-2 rounded-full"
-                    href={`/categories/`}
+                    href={`https://www.tiktok.com/@aca.indumentaria`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -266,7 +266,7 @@ export default async function Footer() {
                         stroke-linejoin="round"
                       />
                     </svg>
-                  </LocalizedClientLink>
+                  </a>
                 </li>
               </ul>
             </div>
