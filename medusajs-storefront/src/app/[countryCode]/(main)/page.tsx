@@ -6,13 +6,16 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
+import Benefits from "@modules/home/components/benefits"
+import MarketingSpace from "@modules/home/components/marketing-space"
+import SocialNetworks from "@modules/home/components/social-networks"
+import Collections from "@modules/home/components/collections"
 
 export const metadata: Metadata = {
   title: "Aca Indumentaria | ¡Encontrá tu estilo con nosotros!",
   description:
     "Descubrí en Aca Indumentaria una amplia variedad de calzado infantil, zapatillas, sandalias, botas, texanas y borcegos de cuero. Además, ofrecemos prendas de vestir como buzos, sacos de lana y ropa de dormir para toda la familia.",
-};
-
+}
 
 const getCollectionsWithProducts = cache(
   async (
@@ -67,13 +70,40 @@ export default async function Home({
     return null
   }
 
+  const bestSellingCollection = collections.find(
+    (collection) => collection.handle === "mas-vendidos"
+  )
+
+  const OffersCollection = collections.find(
+    (collection) => collection.handle === "ofertas"
+  )
+
   return (
     <>
       <Hero />
-      <div className="py-12">
+      <div className="flex items-center justify-center shadow-2xl shadow-neutral-100">
+        <Benefits />
+      </div>
+      <div className="pb-12">
         <ul className="flex flex-col gap-x-6">
-          <FeaturedProducts collections={collections} region={region} />
+          {bestSellingCollection && (
+            <FeaturedProducts
+              collections={[bestSellingCollection]}
+              region={region}
+            />
+          )}
         </ul>
+        <ul className="flex flex-col gap-x-6">
+          {OffersCollection && (
+            <FeaturedProducts
+              collections={[OffersCollection]}
+              region={region}
+            />
+          )}
+        </ul>
+        <MarketingSpace />
+        <SocialNetworks />
+        <Collections />
       </div>
     </>
   )

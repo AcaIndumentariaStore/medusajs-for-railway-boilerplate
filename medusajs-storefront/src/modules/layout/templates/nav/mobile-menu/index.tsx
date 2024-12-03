@@ -126,7 +126,7 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "Inicio", href: "#" },
+    { name: "Inicio", href: "/" },
     { name: "Tienda", href: "#" },
   ],
 }
@@ -199,7 +199,7 @@ function Index() {
             </div>
 
             {/* Links */}
-            <TabGroup className="mt-24">
+            <TabGroup className="mt-16">
               <div className="border-b border-gray-200">
                 <TabList className="-mb-px flex space-x-8 px-4">
                   {navigation.categories.map((category) => (
@@ -292,7 +292,7 @@ function Index() {
                   href="#"
                   className="-m-2 block p-2 font-medium text-gray-900"
                 >
-                  Sign in
+                  Iniciar Sesion
                 </a>
               </div>
               <div className="flow-root">
@@ -300,23 +300,9 @@ function Index() {
                   href="#"
                   className="-m-2 block p-2 font-medium text-gray-900"
                 >
-                  Create account
+                  Crear Cuenta
                 </a>
               </div>
-            </div>
-
-            <div className="border-t border-gray-200 px-4 py-6">
-              <a href="#" className="-m-2 flex items-center p-2">
-                <img
-                  alt=""
-                  src="https://tailwindui.com/plus/img/flags/flag-canada.svg"
-                  className="block h-auto w-5 shrink-0"
-                />
-                <span className="ml-3 block text-base font-medium text-gray-900">
-                  CAD
-                </span>
-                <span className="sr-only">, change currency</span>
-              </a>
             </div>
           </DialogPanel>
         </div>
