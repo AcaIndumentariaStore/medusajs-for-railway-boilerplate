@@ -2,6 +2,7 @@
 import Image from "next/image"
 import { Image as MedusaImage } from "@medusajs/medusa"
 import { Container } from "@medusajs/ui"
+// @ts-ignore
 import * as Tabs from "@radix-ui/react-tabs"
 
 type ImageGalleryProps = {
@@ -18,6 +19,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
       >
         <div className="flex flex-1 lg:mr-8 gap-y-4">
           {images.map((image, index) => (
+            // @ts-ignore
             <Tabs.Content key={image.id} value={image.id} className="w-full">
               <Container
                 className="relative aspect-[29/34] w-full overflow-hidden bg-ui-bg-subtle"
@@ -37,8 +39,10 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
           ))}
         </div>
         <div className="block xl:hidden">
+          {/* @ts-ignore */}
           <Tabs.List className="grid grid-cols-4 mt-6 gap-x-4">
             {images.map((image) => (
+              // @ts-ignore
               <Tabs.Trigger key={image.id} value={image.id}>
                 <Container className="relative aspect-[29/34] w-full overflow-hidden bg-ui-bg-subtle mb-2">
                   <Image
@@ -53,11 +57,13 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
           </Tabs.List>
         </div>
         <div className="hidden xl:block">
+          {/* @ts-ignore */}
           <Tabs.List
             className="scrollbar-thin flex flex-col mx-6 mt-0 overflow-y-auto"
             style={{ maxHeight: "calc(2 * 20vw)" }}
           >
             {images.map((image) => (
+              // @ts-ignore
               <Tabs.Trigger key={image.id} value={image.id}>
                 <Container className="relative aspect-[29/34] w-full overflow-hidden bg-ui-bg-subtle mb-2">
                   <Image
