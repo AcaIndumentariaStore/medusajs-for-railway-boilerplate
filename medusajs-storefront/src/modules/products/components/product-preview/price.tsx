@@ -6,7 +6,7 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
   return (
     <div className="flex flex-col md:flex-row ">
       {price.price_type === "sale" && (
-        <Text className="line-through font-bold text-ui-fg-base">
+        <Text className="line-through font-bold text-ui-fg-base mr-2">
           {price.original_price}
         </Text>
       )}

@@ -86,7 +86,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                   )}
                   <span
                     className={clx({
-                      "text-ui-fg-interactive":
+                      "text-aca-green":
                         selectedPrice.price_type === "sale",
                     })}
                   >
@@ -103,7 +103,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                   <span>
                     {variant
                       ? Object.values(options).join(" / ")
-                      : "Select Options"}
+                      : "Seleccione opción"}
                   </span>
                   <ChevronDown />
                 </div>
@@ -115,10 +115,10 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 isLoading={isAdding}
               >
                 {!variant
-                  ? "Select variant"
+                  ? "Seleccionar variante"
                   : !inStock
-                  ? "Out of stock"
-                  : "Add to cart"}
+                  ? "Fuera de stock"
+                  : "Agregar al carrito"}
               </Button>
             </div>
           </div>
