@@ -11,13 +11,13 @@ import BannerM3 from "../../../../images/BannerM3.png";
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full relative bg-ui-bg-subtle">
+    <div className="relative w-full h-[75vh]">
       <Swiper
         slidesPerView={1}
         loop
         centeredSlides
         autoplay={{
-          delay: 4000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
@@ -27,8 +27,8 @@ const Hero = () => {
             src={BannerM1}
             alt="BannerM1"
             width={430}
-            height={932}
-            className="object-cover select-none"
+            objectFit="cover"
+            className="select-none"
           />
         </SwiperSlide>
         <SwiperSlide className="relative w-full h-full">
@@ -36,8 +36,8 @@ const Hero = () => {
             src={BannerM2}
             alt="BannerM2"
             width={430}
-            height={932}
-            className="object-cover select-none"
+            objectFit="cover"
+            className="select-none"
           />
         </SwiperSlide>
         <SwiperSlide className="relative w-full h-full">
@@ -45,8 +45,8 @@ const Hero = () => {
             src={BannerM3}
             alt="BannerM3"
             width={430}
-            height={932}
-            className="object-cover select-none"
+            objectFit="cover"
+            className="select-none"
           />
         </SwiperSlide>
       </Swiper>
