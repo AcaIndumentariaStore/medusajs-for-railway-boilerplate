@@ -11,7 +11,7 @@ import BannerM3 from "../../../../images/BannerM3.png";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[75vh]">
+    <div className="relative w-full h-[700px]">
       <Swiper
         slidesPerView={1}
         loop
@@ -27,6 +27,7 @@ const Hero = () => {
             src={BannerM1}
             alt="BannerM1"
             width={430}
+            height={700}
             objectFit="cover"
             className="select-none"
           />
@@ -36,6 +37,7 @@ const Hero = () => {
             src={BannerM2}
             alt="BannerM2"
             width={430}
+            height={700}
             objectFit="cover"
             className="select-none"
           />
@@ -45,6 +47,7 @@ const Hero = () => {
             src={BannerM3}
             alt="BannerM3"
             width={430}
+            height={700}
             objectFit="cover"
             className="select-none"
           />
