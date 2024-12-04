@@ -3,7 +3,7 @@ import { Badge } from "@medusajs/ui"
 const PaymentTest = ({ className }: { className?: string }) => {
   return (
     <Badge color="green" className={className}>
-      <span className="font-semibold">30%</span> de Descuento
+      <span className="font-semibold">20%</span> de Descuento
     </Badge>
   )
 }

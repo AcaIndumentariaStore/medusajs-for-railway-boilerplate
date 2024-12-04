@@ -23,15 +23,15 @@ const AccountLayout: React.FC<AccountLayoutProps> = ({
         </div>
         <div className="flex flex-col small:flex-row items-end justify-between small:border-t border-gray-200 py-12 gap-8">
           <div>
-            <h3 className="text-xl-semi mb-4">Got questions?</h3>
-            <span className="txt-medium">
-              You can find frequently asked questions and answers on our
-              customer service page.
+            <h3 className="text-xl-semi mb-4">¿Tenes preguntas?</h3>
+            <span className="txt-medium text-aca-grey">
+              Puede comunicarse con nuestra atención al cliente a traves de
+              nuestro Whatsapp
             </span>
           </div>
           <div>
-            <UnderlineLink href="/customer-service">
-              Customer Service
+            <UnderlineLink href="https://api.whatsapp.com/message/GV5YHAXA4U2IK1?autoload=1&app_absent=0">
+              Whatsapp
             </UnderlineLink>
           </div>
         </div>

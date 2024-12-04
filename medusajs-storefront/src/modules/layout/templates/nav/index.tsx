@@ -20,7 +20,7 @@ const navigation = {
       featured: [
         {
           name: "Ultimos Lanzamientos",
-          href: "#",
+          href: "/store?sortBy=created_at",
           imageSrc:
             "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
           imageAlt:
@@ -28,7 +28,7 @@ const navigation = {
         },
         {
           name: "¡En Liquidacion! Hasta -50% OFF",
-          href: "#",
+          href: "/collections/liquidacion",
           imageSrc:
             "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
           imageAlt:
@@ -62,7 +62,7 @@ const navigation = {
       featured: [
         {
           name: "Ultimos Lanzamientos",
-          href: "#",
+          href: "/store?sortBy=created_at",
           imageSrc:
             "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
           imageAlt:
@@ -70,7 +70,7 @@ const navigation = {
         },
         {
           name: "¡En Liquidacion! Hasta -50% OFF",
-          href: "#",
+          href: "/collections/liquidacion",
           imageSrc:
             "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
           imageAlt:
@@ -101,7 +101,7 @@ const navigation = {
   ],
   pages: [
     { name: "Inicio", href: "/" },
-    { name: "Tienda", href: "#" },
+    { name: "Tienda", href: "/store" },
   ],
 }
 

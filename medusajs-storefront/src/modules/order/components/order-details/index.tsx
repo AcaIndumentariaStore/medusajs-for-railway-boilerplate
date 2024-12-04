@@ -16,30 +16,31 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
   return (
     <div>
       <Text>
-        We have sent the order confirmation details to{" "}
+        Nos contactaremos a la brevedad para confirmar su pedido y coordinar la
+        fecha de entrega. Al siguiente numero telefonico{" "}
         <span className="text-ui-fg-medium-plus font-semibold">
-          {order.email}
+          {order.shipping_address.phone}
         </span>
         .
       </Text>
       <Text className="mt-2">
-        Order date: {new Date(order.created_at).toDateString()}
+        Fecha del pedido: {new Date(order.created_at).toDateString()}
       </Text>
-      <Text className="mt-2 text-ui-fg-interactive">
-        Order number: {order.display_id}
+      <Text className="mt-2 text-aca-green">
+        Número del pedido: {order.display_id}
       </Text>
 
       <div className="flex items-center text-compact-small gap-x-4 mt-4">
         {showStatus && (
           <>
             <Text>
-              Order status:{" "}
+              Estado del pedido:{" "}
               <span className="text-ui-fg-subtle ">
                 {formatStatus(order.fulfillment_status)}
               </span>
             </Text>
             <Text>
-              Payment status:{" "}
+              Estado del pago:{" "}
               <span className="text-ui-fg-subtle ">
                 {formatStatus(order.payment_status)}
               </span>

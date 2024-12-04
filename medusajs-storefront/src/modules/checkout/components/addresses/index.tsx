@@ -7,7 +7,7 @@ import {
   useParams,
 } from "next/navigation"
 import { Cart, Customer } from "@medusajs/medusa"
-import { CheckCircleSolid } from "@medusajs/icons"
+import { FaCircleCheck } from "react-icons/fa6";
 import { Heading, Text, useToggleState } from "@medusajs/ui"
 
 import Divider from "@modules/common/components/divider"
@@ -56,16 +56,16 @@ const Addresses = ({
           level="h2"
           className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
         >
-          Address
-          {!isOpen && <CheckCircleSolid />}
+          Dirección
+          {!isOpen && <FaCircleCheck className="text-aca-green text-base" />}
         </Heading>
         {!isOpen && cart?.shipping_address && (
           <Text>
             <button
               onClick={handleEdit}
-              className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+              className="text-aca-green hover:text-aca-strong-green"
             >
-              Edit
+              Editar
             </button>
           </Text>
         )}
@@ -87,13 +87,13 @@ const Addresses = ({
                   level="h2"
                   className="text-3xl-regular gap-x-4 pb-6 pt-8"
                 >
-                  Billing address
+                  Dirección de Envio
                 </Heading>
 
                 <BillingAddress cart={cart} countryCode={countryCode} />
               </div>
             )}
-            <SubmitButton className="mt-6">Continue to delivery</SubmitButton>
+            <SubmitButton className="mt-6">Continuar con la entrega</SubmitButton>
             <ErrorMessage error={message} />
           </div>
         </form>
@@ -105,7 +105,7 @@ const Addresses = ({
                 <div className="flex items-start gap-x-1 w-full">
                   <div className="flex flex-col w-1/3">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Shipping Address
+                    Dirección de envío
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
                       {cart.shipping_address.first_name}{" "}
@@ -126,7 +126,7 @@ const Addresses = ({
 
                   <div className="flex flex-col w-1/3 ">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Contact
+                      Contacto
                     </Text>
                     <Text className="txt-medium text-ui-fg-subtle">
                       {cart.shipping_address.phone}
@@ -138,12 +138,12 @@ const Addresses = ({
 
                   <div className="flex flex-col w-1/3">
                     <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                      Billing Address
+                      Dirección de Envio
                     </Text>
 
                     {sameAsSBilling ? (
                       <Text className="txt-medium text-ui-fg-subtle">
-                        Billing- and delivery address are the same.
+                        La dirección de facturación y entrega son la misma.
                       </Text>
                     ) : (
                       <>

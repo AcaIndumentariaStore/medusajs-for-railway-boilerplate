@@ -92,7 +92,7 @@ export default async function ProductPreview({
               />
             </svg>
             <Text className="text-aca-strong-green text-xs">
-              35% Descuento en Efectivo o Transferencia
+              20% Descuento en Efectivo o Transferencia
             </Text>
           </div>
         </div>

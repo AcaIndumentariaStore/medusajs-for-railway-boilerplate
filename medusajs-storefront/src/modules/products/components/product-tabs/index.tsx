@@ -123,8 +123,9 @@ const ShippingInfoTab = () => {
           <div>
             <span className="font-semibold">Entrega rápida</span>
             <p className="max-w-sm">
-              Su paquete llegará en 3-5 días hábiles al momento de su recogida.
-              ubicación o en la comodidad de tu hogar.
+              Realizamos envíos entre 1 y 5 días hábiles. Para más detalles
+              sobre el tiempo de entrega en tu zona, no dudes en comunicarte con
+              nosotros a través de WhatsApp.
             </p>
           </div>
         </div>
@@ -133,19 +134,9 @@ const ShippingInfoTab = () => {
           <div>
             <span className="font-semibold">Intercambios simples</span>
             <p className="max-w-sm">
-              ¿El ajuste no es del todo correcto? No te preocupes: te
-              cambiaremos tu producto por uno nuevo.
-            </p>
-          </div>
-        </div>
-        <div className="flex items-start gap-x-2">
-          <Back />
-          <div>
-            <span className="font-semibold">Devoluciones fáciles</span>
-            <p className="max-w-sm">
-              Simplemente devuelva su producto y le reembolsaremos su dinero. No
-              Preguntas formuladas: haremos todo lo posible para asegurarnos de
-              que su devolución es sin complicaciones.
+              Si necesitas realizar un cambio de talle o hay algún problema con
+              tu producto, contáctanos por WhatsApp para coordinarlo de manera
+              rápida y sencilla.
             </p>
           </div>
         </div>
@@ -212,11 +203,11 @@ const PaymentInfoTab = () => {
               deseas y finaliza tu compra eligiendo la opción de pago Efectivo.
             </Text>
             <Text className="mb-1">
-              <strong>Confirma tu pedido:</strong>Recibirás un mensaje con los
+              <strong>Confirma tu pedido: </strong>Recibirás un mensaje con los
               detalles de tu compra y el tiempo estimado de entrega.
             </Text>
             <Text className="mb-1">
-              <strong>Pagá al recibir:</strong>Al recibir tu producto, realiza
+              <strong>Pagá al recibir: </strong>Al recibir tu producto, realiza
               el pago en efectivo. ¡Así de fácil!
             </Text>
           </div>
@@ -263,8 +254,8 @@ const PaymentInfoTab = () => {
               bancarios para realizar el depósito.
             </Text>
             <Text className="mb-1">
-              <strong>Confirma tu pago:</strong>Toma una captura de pantalla de
-              tu comprobante y envíanoslo por WhatsApp al +54 9 11 2345-6789.
+              <strong>Confirma tu pago: </strong>Toma una captura de pantalla de
+              tu comprobante y envíanoslo por WhatsApp al +54 9 11 6940-7581.
             </Text>
             <Text className="mb-1">
               <strong>¡Y listo! </strong>Una vez confirmado tu pago, nos
@@ -296,7 +287,7 @@ const PaymentInfoTab = () => {
                     </Text>
                   </div>
                   <Badge color="green">
-                    <p className="text-xs">HASTA 12 CUOTAS SIN INTERES</p>
+                    <p className="text-xs">HASTA 3 CUOTAS SIN INTERES</p>
                   </Badge>
                 </div>
                 <div className="grid grid-cols-8 lg:grid-cols-12 gap-2 py-4">

@@ -4,7 +4,7 @@ const PaymentTest = ({ className }: { className?: string }) => {
   return (
     <Badge color="green" className={className}>
       Hasta {" "}
-      <span className="font-semibold">12 Cuotas</span> sin interes
+      <span className="font-semibold">3 Cuotas</span> sin interes
     </Badge>
   )
 }

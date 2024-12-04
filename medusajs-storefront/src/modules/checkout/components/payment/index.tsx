@@ -20,6 +20,7 @@ import { StripeCardElementOptions } from "@stripe/stripe-js"
 
 import { CiCreditCard1, CiCreditCard2 } from "react-icons/ci"
 import { PiMoneyWavyThin } from "react-icons/pi"
+import { FaCircleCheck } from "react-icons/fa6";
 
 import Visa from "../../../../images/tarjetas/visa.svg"
 import MasterCard from "../../../../images/tarjetas/mastercard.svg"
@@ -150,16 +151,16 @@ const Payment = ({
             }
           )}
         >
-          Payment
-          {!isOpen && paymentReady && <CheckCircleSolid />}
+          Pago
+          {!isOpen && paymentReady && <FaCircleCheck className="text-aca-green text-base" />}
         </Heading>
         {!isOpen && paymentReady && (
           <Text>
             <button
               onClick={handleEdit}
-              className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+              className="text-aca-green hover:text-aca-strong-green"
             >
-              Edit
+              Editar
             </button>
           </Text>
         )}
@@ -277,7 +278,7 @@ const Payment = ({
                         </Text>
                       </div>
                       <Badge color="green">
-                        <p className="text-xs">HASTA 12 CUOTAS SIN INTERES</p>
+                        <p className="text-xs">HASTA 3 CUOTAS SIN INTERES</p>
                       </Badge>
                     </div>
                     <div className="grid grid-cols-8 lg:grid-cols-12 gap-2 py-4">
@@ -344,7 +345,7 @@ const Payment = ({
               isLoading={isLoading}
               disabled={(isStripe && !cardComplete) || !cart.payment_session}
             >
-              Continue to review
+              Continuar revisando
             </Button>
           </div>
         ) : (
@@ -358,7 +359,7 @@ const Payment = ({
             <div className="flex items-start gap-x-1 w-full">
               <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                  Payment method
+                Método de pago
                 </Text>
                 <Text className="txt-medium text-ui-fg-subtle">
                   {paymentInfoMap[cart.payment_session.provider_id]?.title ||
@@ -374,7 +375,7 @@ const Payment = ({
               </div>
               <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                  Payment details
+                Detalles de pago
                 </Text>
                 <div className="flex gap-2 txt-medium text-ui-fg-subtle items-center">
                   <Container className="flex items-center h-7 w-fit p-2 bg-ui-button-neutral-hover">

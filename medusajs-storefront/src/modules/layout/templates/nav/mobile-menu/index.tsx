@@ -1,30 +1,10 @@
 "use client"
 
-import { Suspense } from "react"
-import Image from "next/image"
-import { headers } from "next/headers"
-import { listRegions } from "@lib/data"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import CartButton from "@modules/layout/components/cart-button"
-import SideMenu from "@modules/layout/components/side-menu"
-import AcaIndumentariaLoco from "../../../../images/AcaIndumentariaLogo.png"
-
-import { ChevronDownIcon } from "@heroicons/react/20/solid"
-import {
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-} from "@heroicons/react/24/outline"
-
 import { Fragment, useState } from "react"
 import {
   Dialog,
   DialogBackdrop,
   DialogPanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
   Tab,
   TabGroup,
   TabList,
@@ -32,9 +12,6 @@ import {
   TabPanels,
 } from "@headlessui/react"
 import {
-  Bars3Icon,
-  MagnifyingGlassIcon,
-  ShoppingBagIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline"
 
@@ -45,21 +22,21 @@ const navigation = {
       name: "Prendas de Vestir",
       featured: [
         {
-            name: "Ultimos Lanzamientos",
-            href: "#",
-            imageSrc:
-              "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
-            imageAlt:
-              "",
-          },
-          {
-            name: "¡En Liquidacion! Hasta -50% OFF",
-            href: "#",
-            imageSrc:
-              "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
-            imageAlt:
-              "",
-          },
+          name: "Ultimos Lanzamientos",
+          href: "/store?sortBy=created_at",
+          imageSrc:
+            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
+          imageAlt:
+            "",
+        },
+        {
+          name: "¡En Liquidacion! Hasta -50% OFF",
+          href: "/collections/liquidacion",
+          imageSrc:
+            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
+          imageAlt:
+            "",
+        },
       ],
       sections: [
         {
@@ -87,21 +64,21 @@ const navigation = {
       name: "Calzado",
       featured: [
         {
-            name: "Ultimos Lanzamientos",
-            href: "#",
-            imageSrc:
-              "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
-            imageAlt:
-              "",
-          },
-          {
-            name: "¡En Liquidacion! Hasta -50% OFF",
-            href: "#",
-            imageSrc:
-              "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
-            imageAlt:
-              "",
-          },
+          name: "Ultimos Lanzamientos",
+          href: "/store?sortBy=created_at",
+          imageSrc:
+            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
+          imageAlt:
+            "",
+        },
+        {
+          name: "¡En Liquidacion! Hasta -50% OFF",
+          href: "/collections/liquidacion",
+          imageSrc:
+            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
+          imageAlt:
+            "",
+        },
       ],
       sections: [
         {
@@ -127,7 +104,7 @@ const navigation = {
   ],
   pages: [
     { name: "Inicio", href: "/" },
-    { name: "Tienda", href: "#" },
+    { name: "Tienda", href: "/store" },
   ],
 }
 
@@ -289,7 +266,7 @@ function Index() {
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a
-                  href="#"
+                  href="/account"
                   className="-m-2 block p-2 font-medium text-gray-900"
                 >
                   Iniciar Sesion
@@ -297,7 +274,7 @@ function Index() {
               </div>
               <div className="flow-root">
                 <a
-                  href="#"
+                  href="/account"
                   className="-m-2 block p-2 font-medium text-gray-900"
                 >
                   Crear Cuenta
