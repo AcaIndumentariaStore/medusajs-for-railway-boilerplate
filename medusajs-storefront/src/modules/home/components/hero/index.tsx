@@ -1,62 +1,57 @@
-"use client"
+"use client";
 
-import React from 'react';
-import { Heading } from "@medusajs/ui"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay, Pagination, Navigation } from "swiper/modules"
+import React from "react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import BannerM1 from "../../../../images/BannerM1.png";
+import BannerM2 from "../../../../images/BannerM2.png";
+import BannerM3 from "../../../../images/BannerM3.png";
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+    <div className="h-[75vh] w-full relative bg-ui-bg-subtle">
       <Swiper
         slidesPerView={1}
-        loop={true}
-        centeredSlides={true}
+        loop
+        centeredSlides
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
       >
-        <SwiperSlide className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Aca Indumentaria
-          </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          ></Heading>
+        <SwiperSlide className="relative w-full h-full">
+          <Image
+            src={BannerM1}
+            alt="BannerM1"
+            width={430}
+            height={932}
+            className="object-cover select-none"
+          />
         </SwiperSlide>
-        <SwiperSlide className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Banner 01
-          </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          ></Heading>
+        <SwiperSlide className="relative w-full h-full">
+          <Image
+            src={BannerM2}
+            alt="BannerM2"
+            width={430}
+            height={932}
+            className="object-cover select-none"
+          />
         </SwiperSlide>
-        <SwiperSlide className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Banner 02
-          </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          ></Heading>
+        <SwiperSlide className="relative w-full h-full">
+          <Image
+            src={BannerM3}
+            alt="BannerM3"
+            width={430}
+            height={932}
+            className="object-cover select-none"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

@@ -85,7 +85,7 @@ export default async function Home({
         <Benefits />
       </div>
       <div className="pb-12">
-        {/* <ul className="flex flex-col gap-x-6">
+        <ul className="flex flex-col gap-x-6">
           {bestSellingCollection && (
             <FeaturedProducts
               collections={[bestSellingCollection]}
@@ -100,7 +100,7 @@ export default async function Home({
               region={region}
             />
           )}
-        </ul> */}
+        </ul>
         <MarketingSpace />
         <SocialNetworks />
         <Collections />
