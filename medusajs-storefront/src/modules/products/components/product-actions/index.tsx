@@ -192,7 +192,7 @@ export default function ProductActions({
             />
           </svg>
           <Text className="text-aca-green text-base">
-            35% Descuento en Efectivo o Transferencia
+            20% Descuento en Efectivo o Transferencia
           </Text>
         </div>
 

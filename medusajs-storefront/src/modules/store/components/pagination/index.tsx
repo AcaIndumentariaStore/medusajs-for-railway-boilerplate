@@ -2,13 +2,16 @@
 
 import { clx } from "@medusajs/ui"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { useCallback } from "react"
 
 export function Pagination({
   page,
   totalPages,
+  'data-testid': dataTestid
 }: {
   page: number
   totalPages: number
+  'data-testid'?: string
 }) {
   const router = useRouter()
   const pathname = usePathname()
@@ -19,11 +22,11 @@ export function Pagination({
     Array.from({ length: stop - start + 1 }, (_, index) => start + index)
 
   // Function to handle page changes
-  const handlePageChange = (newPage: number) => {
+  const handlePageChange = useCallback((newPage: number) => {
     const params = new URLSearchParams(searchParams)
     params.set("page", newPage.toString())
     router.push(`${pathname}?${params.toString()}`)
-  }
+  }, [router, pathname, searchParams])
 
   // Function to render a page button
   const renderPageButton = (
@@ -106,7 +109,28 @@ export function Pagination({
   // Render the component
   return (
     <div className="flex justify-center w-full mt-12">
-      <div className="flex gap-3 items-end">{renderPageButtons()}</div>
+      <div className="flex gap-3 items-end" data-testid={dataTestid}>
+        {/* Left arrow for previous page */}
+        <button
+          className="txt-xlarge-plus text-ui-fg-muted"
+          onClick={() => handlePageChange(page - 1)}
+          disabled={page === 1}
+        >
+          &larr;
+        </button>
+
+        {/* Page buttons */}
+        {renderPageButtons()}
+
+        {/* Right arrow for next page */}
+        <button
+          className="txt-xlarge-plus text-ui-fg-muted"
+          onClick={() => handlePageChange(page + 1)}
+          disabled={page === totalPages}
+        >
+          &rarr;
+        </button>
+      </div>
     </div>
   )
 }

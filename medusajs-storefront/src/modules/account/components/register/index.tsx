@@ -17,24 +17,22 @@ const Register = ({ setCurrentView }: Props) => {
   const [message, formAction] = useFormState(signUp, null)
 
   return (
-    <div className="max-w-sm flex flex-col items-center">
-      <h1 className="text-large-semi uppercase mb-6">
-        Become a Medusa Store Member
-      </h1>
+    <div className="bg-white border border-gray-200 rounded-xl shadow-sm w-full max-w-sm flex flex-col items-center p-4 sm:p-7">
+      <h1 className="text-large-semi uppercase mb-6">Crear cuenta</h1>
       <p className="text-center text-base-regular text-ui-fg-base mb-4">
-        Create your Medusa Store Member profile, and get access to an enhanced
-        shopping experience.
+        Crea tu perfil de miembro de Aca Indumentaria y tené acceso a una
+        experiencia de compra mejorada.
       </p>
       <form className="w-full flex flex-col" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label="First name"
+            label="Nombre"
             name="first_name"
             required
             autoComplete="given-name"
           />
           <Input
-            label="Last name"
+            label="Apellido"
             name="last_name"
             required
             autoComplete="family-name"
@@ -46,9 +44,14 @@ const Register = ({ setCurrentView }: Props) => {
             type="email"
             autoComplete="email"
           />
-          <Input label="Phone" name="phone" type="tel" autoComplete="tel" />
           <Input
-            label="Password"
+            label="Número de telefono"
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+          />
+          <Input
+            label="Contraseña"
             name="password"
             required
             type="password"
@@ -57,31 +60,32 @@ const Register = ({ setCurrentView }: Props) => {
         </div>
         <ErrorMessage error={message} />
         <span className="text-center text-ui-fg-base text-small-regular mt-6">
-          By creating an account, you agree to Medusa Store&apos;s{" "}
+          Al crear una cuenta, usted acepta los términos y condiciones de Aca
+          Indumentara{" "}
           <LocalizedClientLink
             href="/content/privacy-policy"
             className="underline"
           >
-            Privacy Policy
+            Política de privacidad
           </LocalizedClientLink>{" "}
-          and{" "}
+          y{" "}
           <LocalizedClientLink
             href="/content/terms-of-use"
             className="underline"
           >
-            Terms of Use
+            Condiciones de uso
           </LocalizedClientLink>
           .
         </span>
-        <SubmitButton className="w-full mt-6">Join</SubmitButton>
+        <SubmitButton className="w-full mt-6">Crear cuenta</SubmitButton>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
-        Already a member?{" "}
+        ¿Ya sos miembro?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.SIGN_IN)}
           className="underline"
         >
-          Sign in
+          Iniciar sesión
         </button>
         .
       </span>

@@ -170,7 +170,7 @@ export default function Banner() {
               <div>
                 <h3 className="text-lg text-aca-grey">Envíos a Todo el País</h3>
                 <p className="text-xs font-light text-aca-grey">
-                  Recibí tu pedido en casa o coordinamos un punto de encuentro
+                  Recibí tu pedido en casa o retirá en nuestro Showroom
                 </p>
               </div>
             </section>
@@ -200,9 +200,9 @@ export default function Banner() {
                 />
               </svg>
               <div>
-                <h3 className="text-lg text-aca-grey">35% de Descuento</h3>
+                <h3 className="text-lg text-aca-grey">20% de Descuento</h3>
                 <p className="text-xs font-light text-aca-grey">
-                  Abonando en Efectivo (contra entrega) o Transferencia Bancaria
+                Abonando en Efectivo o Transferencia y 10% de adicional en Showroom
                 </p>
               </div>
             </section>
@@ -339,7 +339,7 @@ export default function Banner() {
           <div>
             <h3 className="text-lg text-aca-grey">Envíos a Todo el País</h3>
             <p className="text-xs font-light text-aca-grey">
-              Recibí tu pedido en casa o coordinamos un punto de encuentro
+              Recibí tu pedido en casa o retirá en nuestro Showroom
             </p>
           </div>
         </section>
@@ -367,9 +367,9 @@ export default function Banner() {
             />
           </svg>
           <div>
-            <h3 className="text-lg text-aca-grey">35% de Descuento</h3>
+            <h3 className="text-lg text-aca-grey">20% de Descuento</h3>
             <p className="text-xs font-light text-aca-grey">
-              Abonando en Efectivo (contra entrega) o Transferencia Bancaria
+              Abonando en Efectivo o Transferencia y 10% de adicional en Showroom
             </p>
           </div>
         </section>

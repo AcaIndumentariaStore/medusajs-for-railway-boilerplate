@@ -28,12 +28,12 @@ async function getOrder(id: string) {
 }
 
 export const metadata: Metadata = {
-  title: "Order Confirmed",
-  description: "You purchase was successful",
+  title: "Pedido confirmado | Aca Indumentaria",
+  description: "Su compra fue exitosa",
 }
 
 export default async function OrderConfirmedPage({ params }: Props) {
   const { order } = await getOrder(params.id)
 
-  return <OrderCompletedTemplate order={order} />
+  return <div className="bg-neutral-50"><OrderCompletedTemplate order={order} /></div>
 }

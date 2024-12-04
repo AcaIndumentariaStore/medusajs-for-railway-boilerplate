@@ -5,6 +5,7 @@ import { Heading, Text, clx } from "@medusajs/ui"
 import PaymentButton from "../payment-button"
 import { useSearchParams } from "next/navigation"
 import { Cart } from "@medusajs/medusa"
+import Link from "next/link"
 
 const Review = ({
   cart,
@@ -32,7 +33,7 @@ const Review = ({
             }
           )}
         >
-          Review
+          Revisar
         </Heading>
       </div>
       {isOpen && previousStepsCompleted && (
@@ -40,10 +41,37 @@ const Review = ({
           <div className="flex items-start gap-x-1 w-full mb-6">
             <div className="w-full">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                By clicking the Place Order button, you confirm that you have
-                read, understand and accept our Terms of Use, Terms of Sale and
-                Returns Policy and acknowledge that you have read Medusa
-                Store&apos;s Privacy Policy.
+                Al hacer clic en el botón Realizar pedido, confirmas que has
+                leído, comprendido y aceptado nuestros{" "}
+                <Link
+                  className="underline text-aca-green hover:text-aca-strong-green"
+                  href="/politicas#terminos-de-uso"
+                >
+                  Términos de uso
+                </Link>
+                ,
+                {" "}
+                <Link
+                  className="underline text-aca-green hover:text-aca-strong-green"
+                  href="/politicas#terminos-de-venta"
+                >
+                  Términos de venta
+                </Link>{" "}
+                y{" "}
+                <Link
+                  className="underline text-aca-green hover:text-aca-strong-green"
+                  href="/politicas#politica-de-devoluciones"
+                >
+                  Política de devoluciones
+                </Link>{" "}
+                y reconoces que has leído la {" "}
+                <Link
+                  className="underline text-aca-green hover:text-aca-strong-green"
+                  href="/politicas#politica-de-privacidad"
+                >
+                  Política de privacidad
+                </Link>{" "}
+                de Aca Indumentaria.
               </Text>
             </div>
           </div>

@@ -6,6 +6,7 @@ import { Cart } from "@medusajs/medusa"
 import { PricedShippingOption } from "@medusajs/medusa/dist/types/pricing"
 import { Button, Heading, Text, clx, useToggleState } from "@medusajs/ui"
 import { formatAmount } from "@lib/util/prices"
+import { FaCircleCheck } from "react-icons/fa6";
 
 import Divider from "@modules/common/components/divider"
 import Radio from "@modules/common/components/radio"
@@ -76,8 +77,8 @@ const Shipping: React.FC<ShippingProps> = ({
             }
           )}
         >
-          Delivery
-          {!isOpen && cart.shipping_methods.length > 0 && <CheckCircleSolid />}
+          Entrega
+          {!isOpen && cart.shipping_methods.length > 0 && <FaCircleCheck className="text-aca-green text-base" />}
         </Heading>
         {!isOpen &&
           cart?.shipping_address &&
@@ -86,9 +87,9 @@ const Shipping: React.FC<ShippingProps> = ({
             <Text>
               <button
                 onClick={handleEdit}
-                className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+                className="text-aca-green hover:text-aca-strong-green"
               >
-                Edit
+                Editar
               </button>
             </Text>
           )}
@@ -151,7 +152,7 @@ const Shipping: React.FC<ShippingProps> = ({
             isLoading={isLoading}
             disabled={!cart.shipping_methods[0]}
           >
-            Continue to payment
+            Continuar con el pago
           </Button>
         </div>
       ) : (
@@ -160,7 +161,7 @@ const Shipping: React.FC<ShippingProps> = ({
             {cart && cart.shipping_methods.length > 0 && (
               <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                  Method
+                  Método
                 </Text>
                 <Text className="txt-medium text-ui-fg-subtle">
                   {cart.shipping_methods[0].shipping_option.name} (
