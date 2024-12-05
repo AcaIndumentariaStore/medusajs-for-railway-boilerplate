@@ -10,6 +10,7 @@ import Benefits from "@modules/home/components/benefits"
 import MarketingSpace from "@modules/home/components/marketing-space"
 import SocialNetworks from "@modules/home/components/social-networks"
 import Collections from "@modules/home/components/collections"
+import ShowroomModal from "@modules/home/components/showroom-modal"
 
 export const metadata: Metadata = {
   title: "Aca Indumentaria | ¡Encontrá tu estilo con nosotros!",
@@ -80,8 +81,9 @@ export default async function Home({
 
   return (
     <>
+      <ShowroomModal />
       <Hero />
-      <div className="flex items-center justify-center shadow-2xl shadow-neutral-100">
+      <div className="flex items-center justify-center shadow-2xl shadow-neutral-100 border-t">
         <Benefits />
       </div>
       <div className="pb-12">
