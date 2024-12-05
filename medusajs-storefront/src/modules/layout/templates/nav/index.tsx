@@ -22,7 +22,7 @@ const navigation = {
           name: "Ultimos Lanzamientos",
           href: "/store?sortBy=created_at",
           imageSrc:
-            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
           imageAlt:
             "",
         },
@@ -30,7 +30,7 @@ const navigation = {
           name: "¡En Liquidacion! Hasta -50% OFF",
           href: "/collections/liquidacion",
           imageSrc:
-            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/Captura+de+pantalla+2024-12-02+110723.png",
           imageAlt:
             "",
         },
@@ -64,7 +64,7 @@ const navigation = {
           name: "Ultimos Lanzamientos",
           href: "/store?sortBy=created_at",
           imageSrc:
-            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
           imageAlt:
             "",
         },
@@ -72,7 +72,7 @@ const navigation = {
           name: "¡En Liquidacion! Hasta -50% OFF",
           href: "/collections/liquidacion",
           imageSrc:
-            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/Captura+de+pantalla+2024-12-02+110723.png",
           imageAlt:
             "",
         },

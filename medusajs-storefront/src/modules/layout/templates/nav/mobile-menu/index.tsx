@@ -11,9 +11,9 @@ import {
   TabPanel,
   TabPanels,
 } from "@headlessui/react"
-import {
-  XMarkIcon,
-} from "@heroicons/react/24/outline"
+import { XMarkIcon } from "@heroicons/react/24/outline"
+
+import { Home01Icon, Store01Icon, UserIcon, UserAdd01Icon } from "./icons"
 
 const navigation = {
   categories: [
@@ -25,17 +25,15 @@ const navigation = {
           name: "Ultimos Lanzamientos",
           href: "/store?sortBy=created_at",
           imageSrc:
-            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
-          imageAlt:
-            "",
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
+          imageAlt: "",
         },
         {
           name: "¡En Liquidacion! Hasta -50% OFF",
           href: "/collections/liquidacion",
           imageSrc:
-            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
-          imageAlt:
-            "",
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/Captura+de+pantalla+2024-12-02+110723.png",
+          imageAlt: "",
         },
       ],
       sections: [
@@ -67,17 +65,15 @@ const navigation = {
           name: "Ultimos Lanzamientos",
           href: "/store?sortBy=created_at",
           imageSrc:
-            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-01.jpg",
-          imageAlt:
-            "",
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
+          imageAlt: "",
         },
         {
           name: "¡En Liquidacion! Hasta -50% OFF",
           href: "/collections/liquidacion",
           imageSrc:
-            "https://tailwindui.com/plus/img/ecommerce-images/mega-menu-category-02.jpg",
-          imageAlt:
-            "",
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/Captura+de+pantalla+2024-12-02+110723.png",
+          imageAlt: "",
         },
       ],
       sections: [
@@ -103,8 +99,8 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "Inicio", href: "/" },
-    { name: "Tienda", href: "/store" },
+    { name: "Inicio", icon: Home01Icon, href: "/" },
+    { name: "Tienda", icon: Store01Icon, href: "/store" },
   ],
 }
 
@@ -251,33 +247,43 @@ function Index() {
             </TabGroup>
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-              {navigation.pages.map((page) => (
-                <div key={page.name} className="flow-root">
-                  <a
-                    href={page.href}
-                    className="-m-2 block p-2 font-medium text-gray-900"
-                  >
-                    {page.name}
-                  </a>
-                </div>
-              ))}
+              <div className="flow-root">
+                <a
+                  href="/"
+                  className="-m-2 flex flex-row items-center space-x-2 p-2 font-medium text-gray-900"
+                >
+                  <Home01Icon />
+                  <p>Inicio</p>
+                </a>
+              </div>
+              <div className="flow-root">
+                <a
+                  href="/store"
+                  className="-m-2 flex flex-row items-center space-x-2 p-2 font-medium text-gray-900"
+                >
+                  <Store01Icon />
+                  <p>Tienda</p>
+                </a>
+              </div>
             </div>
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
                 <a
                   href="/account"
-                  className="-m-2 block p-2 font-medium text-gray-900"
+                  className="-m-2 flex flex-row items-center space-x-2 p-2 font-medium text-gray-900"
                 >
-                  Iniciar Sesion
+                  <UserIcon />
+                  <p>Iniciar Sesion</p>
                 </a>
               </div>
               <div className="flow-root">
                 <a
                   href="/account"
-                  className="-m-2 block p-2 font-medium text-gray-900"
+                  className="-m-2 flex flex-row items-center space-x-2 p-2 font-medium text-gray-900"
                 >
-                  Crear Cuenta
+                  <UserAdd01Icon />
+                  <p>Crear Cuenta</p>
                 </a>
               </div>
             </div>
