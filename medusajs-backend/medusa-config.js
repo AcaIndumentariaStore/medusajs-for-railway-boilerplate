@@ -77,7 +77,6 @@ const plugins = [
       access_token: process.env.MERCADOPAGO_ACCESS_TOKEN,
       success_backurl: process.env.MERCADOPAGO_SUCCESS_BACKURL,
       webhook_url: process.env.MERCADOPAGO_WEBHOOK_URL,
-      sandbox: true,
     },
   },
   {
