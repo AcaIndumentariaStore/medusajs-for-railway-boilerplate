@@ -85,7 +85,7 @@ function Index() {
             18:00 hrs y Sábados de 10:00 a 14:00 hrs.
           </p>
 
-          <div className="mt-6 flex flex-col items-center">
+          <div className="mt-6 flex flex-row items-center justify-center">
             <a
               className="flex flex-row items-center space-x-2 py-3 px-5 text-base font-medium rounded-md bg-aca-green text-white hover:bg-aca-strong-green"
               href={`https://wa.me/5491169407581?text=${whatsappMessage}`}
@@ -97,7 +97,7 @@ function Index() {
             </a>
             <button
               type="button"
-              className="mt-4 py-2 px-4 text-sm font-semibold text-aca-green hover:text-aca-strong-green"
+              className="py-2 px-4 text-sm font-semibold text-aca-green hover:text-aca-strong-green"
               onClick={closeModal}
             >
               Cerrar
