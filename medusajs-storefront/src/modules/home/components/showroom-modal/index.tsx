@@ -1,18 +1,23 @@
-"use client";
-import { BlurFade } from "@modules/magic-ui/Blur-fade";
-import React, { useEffect, useState } from "react";
+"use client"
+import React, { useEffect, useState } from "react"
+import { BlurFade } from "@modules/magic-ui/Blur-fade"
+import { AiOutlineWhatsApp } from "react-icons/ai"
 
 function Index() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     // Abre el modal automáticamente al cargar la página
-    setIsOpen(true);
-  }, []);
+    setIsOpen(true)
+  }, [])
 
   const closeModal = () => {
-    setIsOpen(false);
-  };
+    setIsOpen(false)
+  }
+
+  const whatsappMessage = encodeURIComponent(
+    "Hola, me gustaría agendar una cita para visitar su showroom y ver los productos presencialmente!"
+  )
 
   return (
     <div
@@ -80,18 +85,19 @@ function Index() {
             18:00 hrs y Sábados de 10:00 a 14:00 hrs.
           </p>
 
-          <div className="mt-6 flex justify-center gap-x-4">
+          <div className="mt-6 flex flex-col items-center">
             <a
-              className="py-2 px-4 text-sm font-medium rounded-md bg-aca-green text-white hover:bg-aca-strong-green"
-              href="https://maps.app.goo.gl/BrBE8mX7yTr2yHzCA"
+              className="flex flex-row items-center space-x-2 py-3 px-5 text-base font-medium rounded-md bg-aca-green text-white hover:bg-aca-strong-green"
+              href={`https://wa.me/5491169407581?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              ¡Quiero ir!
+              <AiOutlineWhatsApp className="text-xl"/>
+              <p>Agendar cita</p>
             </a>
             <button
               type="button"
-              className="py-2 px-4 text-sm font-semibold text-aca-green hover:text-aca-strong-green"
+              className="mt-4 py-2 px-4 text-sm font-semibold text-aca-green hover:text-aca-strong-green"
               onClick={closeModal}
             >
               Cerrar
@@ -100,7 +106,7 @@ function Index() {
         </BlurFade>
       </div>
     </div>
-  );
+  )
 }
 
-export default Index;
+export default Index
