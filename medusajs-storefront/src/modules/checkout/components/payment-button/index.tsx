@@ -268,7 +268,7 @@ const TransferPaymentButton = ({ notReady }: { notReady: boolean }) => {
 
 const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
   const mercadoPago = useMercadopago.v2(MERCADOPAGO_PUBLIC_KEY, {
-    locale: "es-PE",
+    locale: "es-AR",
   });
 
   const checkout = mercadoPago?.checkout({
@@ -282,7 +282,7 @@ const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
       size="base"
       onClick={() => checkout.open()}
     >
-      Pagar
+      Pagar con Mercado Pago
     </Button>
   );
 };
