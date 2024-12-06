@@ -30,7 +30,7 @@ const navigation = {
         },
         {
           name: "¡En Liquidacion! Hasta -50% OFF",
-          href: "/collections/liquidacion",
+          href: "/collections/en-liquidacion",
           imageSrc:
             "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/Captura+de+pantalla+2024-12-02+110723.png",
           imageAlt: "",
@@ -70,7 +70,7 @@ const navigation = {
         },
         {
           name: "¡En Liquidacion! Hasta -50% OFF",
-          href: "/collections/liquidacion",
+          href: "/collections/en-liquidacion",
           imageSrc:
             "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/Captura+de+pantalla+2024-12-02+110723.png",
           imageAlt: "",
@@ -78,21 +78,15 @@ const navigation = {
       ],
       sections: [
         {
-          id: "temporada-invierno",
-          name: "Temporada Invierno",
+          id: "calzado",
+          name: "Encontrá tu Calzado Ideal",
           items: [
-            { name: "Pantu Botas", href: "#" },
-            { name: "Botas Sienna", href: "#" },
-            { name: "Zuecos Birk", href: "#" },
-          ],
-        },
-        {
-          id: "calzado-y-botas",
-          name: "Calzado y Botas de cuero real",
-          items: [
-            { name: "Borcegos y Botas", href: "#" },
-            { name: "Sandalias Españolas", href: "#" },
-            { name: "Sandalias Ivoty", href: "#" },
+            { name: "Temporada Invierno", href: "/collections/temporada-invierno" },
+            { name: "Para Niños", href: "/collections/ninos" },
+            { name: "De Tela", href: "/collections/" },
+            { name: "De Cuero Ecológico", href: "/collections/cuero-ecologico" },
+            { name: "De Cuero Vacuno", href: "/collections/cuero-vacuno" },
+
           ],
         },
       ],
