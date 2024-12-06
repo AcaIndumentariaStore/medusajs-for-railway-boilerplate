@@ -20,236 +20,118 @@ export default function Example() {
 
   const filters = [
     {
-      id: "categoria",
-      name: "Categoria",
+      id: "prendas",
+      name: "Prendas",
       options: [
         {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
+          value: "",
+          label: "Hombres",
+          href: "/prendas/hombres",
         },
         {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
+          value: "",
+          label: "Mujeres",
+          href: "/prendas/mujeres",
+        },
+        {
+          value: "",
+          label: "Niños",
+          href: "/prendas/ninos",
         },
       ],
     },
     {
-      id: "categoria",
-      name: "Categoria",
+      id: "calzados",
+      name: "Calzados",
       options: [
         {
-          value: "Coleccion",
-          label: "Coleccion",
+          value: "Temporada Invierno",
+          label: "Temporada Invierno",
           href: "",
-          current: false,
+          subOptions: [
+            { label: "Ver Todos", href: "" },
+            { label: "Botas de Tela Acolchonada Sienna con Strass", href: "" },
+            { label: "Botas de Tela Acolchonada Sienna", href: "" },
+            { label: "Chavitos de Tela Gamuzada", href: "" },
+            { label: "Pantubotas Altas Estilo Australiano", href: "" },
+            { label: "Pantubotas Cortas", href: "" },
+            { label: "Pantubotas Wallabys Sin Pelo", href: "" },
+            { label: "Pantubotas Wallabys Con Pelo", href: "" },
+            { label: "Zuecos Birken forrados en Corderito Con Piel", href: "" },
+          ],
         },
         {
-          value: "Coleccion",
-          label: "Coleccion",
+          value: "Calzado para Niños",
+          label: "Calzado para Niños",
           href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
+          subOptions: [
+            { label: "Ver Todos", href: "" },
+            { label: "Guillerminas Escolares - Pups", href: "" },
+            { label: "Zapatillas Escolares - Pups", href: "" },
+            { label: "Zapatillas Niños Tela Elastizada Animadas", href: "" },
+            { label: "Zapatillas Niños Tela Elastizada Lisas", href: "" },
+            { label: "Zapatillas para Niños Animadas", href: "" },
+            { label: "Zapatillas para Niños con Velcro", href: "" },
+            { label: "Zapatillas para Niños con Cordones", href: "" },
+          ],
         },
         {
-          value: "Coleccion",
-          label: "Coleccion",
+          value: "Calzado de Tela",
+          label: "Calzado de Tela",
           href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
+          subOptions: [
+            { label: "Ver Todos", href: "" },
+            { label: "Chatitas de Tela Estilo Waps", href: "" },
+            { label: "Panchas de Tela Ultra Eslastizada", href: "" },
+            { label: "Zapatillas de Tela con Plataforma", href: "" },
+            { label: "Zapatillas de Tela - Julia", href: "" },
+            { label: "Zapatillas Guillerminas", href: "" },
+            { label: "Zapatillas Soft - Hombres", href: "" },
+            { label: "Zapatillas Soft - Mujer", href: "" },
+            { label: "Zapatillas Panchas de Tela", href: "" },
+            { label: "Zapatillas de Tela - Hombres", href: "" },
+            { label: "Zapatillas Tela Elastizada", href: "" },
+            { label: "Zuecos de Tela", href: "" },
+          ],
         },
         {
-          value: "Coleccion",
-          label: "Coleccion",
+          value: "Calzado de Cuero Ecológico",
+          label: "Calzado de Cuero Ecológico",
           href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
+          subOptions: [
+            { label: "Ver Todos", href: "" },
+            { label: "Sandalias De Cuero Ecologico", href: "" },
+            { label: "Sandalias De Cuero Ecologico", href: "" },
+            { label: "Sandalias De Cuero Ecologico", href: "" },
+            { label: "Sandalias De Cuero Ecologico", href: "" },
+            { label: "Sandalias De Cuero Ecologico", href: "" },
+            { label: "Sandalias De Cuero Ecologico", href: "" },
+            { label: "Sandalias De Cuero Ecologico", href: "" },
+            { label: "Zapatillas con Plataforma Tijuana", href: "" },
+            { label: "Zapatillas Cuero Ecologico", href: "" },
+          ],
         },
         {
-          value: "Coleccion",
-          label: "Coleccion",
+          value: "Calzado de Cuero Vacuno",
+          label: "Calzado de Cuero Vacuno",
           href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
+          subOptions: [
+            { label: "Ver Todos", href: "" },
+            { label: "Borcegos Cuero Vacuno", href: "" },
+            { label: "Botas Cuero Vacuno", href: "" },
+            { label: "Chatitas Cuero Vacuno", href: "" },
+            { label: "Sandalias Cuero Vacuno", href: "" },
+            { label: "Sandalias Espanolas", href: "" },
+            { label: "Texanas Altas Cuero Vacuno", href: "" },
+            { label: "Texanas Cortas Cuero Vacuno", href: "" },
+            { label: "Zapatillas Cuero Vacuno Lunita", href: "" },
+
+          ],
         },
         {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-      ],
-    },
-    {
-      id: "categoria",
-      name: "Categoria",
-      options: [
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
-        },
-        {
-          value: "Coleccion",
-          label: "Coleccion",
-          href: "",
-          current: false,
+          value: "",
+          label: "En liquidación",
+          href: "/collections/en-liquidacion",
         },
       ],
     },
@@ -268,7 +150,7 @@ export default function Example() {
     },
     {
       name: "En liquidación",
-      href: "/collections/liquidacion",
+      href: "/collections/en-liquidacion",
       current: false,
     },
     {
@@ -373,25 +255,52 @@ export default function Example() {
                       </DisclosureButton>
                     </h3>
                     <DisclosurePanel className="pt-6">
-                      <div className="space-y-6">
-                        {section.options.map((option, optionIdx) => (
-                          <a
-                            href={option.href}
-                            key={option.href}
-                            className="flex items-center cursor-pointer"
-                          >
+                      <div className="space-y-4">
+                        {section.options.map((option, optionIdx) =>
+                          option.subOptions ? (
+                            <Disclosure key={optionIdx} as="div" className="">
+                              <h4 className="-mx-2 -my-3 flow-root">
+                                <DisclosureButton className="group flex w-full items-center justify-between bg-white px-2 py-3 text-neutral-400 hover:text-neutral-500">
+                                  <span className="text-sm text-neutral-800">
+                                    {option.label}
+                                  </span>
+                                  <span className="ml-6 flex items-center">
+                                    <PlusIcon
+                                      aria-hidden="true"
+                                      className="h-4 w-4 group-data-[open]:hidden"
+                                    />
+                                    <MinusIcon
+                                      aria-hidden="true"
+                                      className="h-4 w-4 [.group:not([data-open])_&]:hidden"
+                                    />
+                                  </span>
+                                </DisclosureButton>
+                              </h4>
+                              <DisclosurePanel className="pt-4">
+                                <ul className="space-y-2">
+                                  {option.subOptions.map((subOption) => (
+                                    <li key={subOption.href}>
+                                      <a
+                                        href={subOption.href}
+                                        className="text-sm text-neutral-600 hover:text-neutral-800"
+                                      >
+                                        {subOption.label}
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </DisclosurePanel>
+                            </Disclosure>
+                          ) : (
                             <a
-                              defaultValue={option.value}
-                              id={`filter-${section.id}-${optionIdx}`}
-                            />
-                            <label
-                              htmlFor={`filter-${section.id}-${optionIdx}`}
-                              className="text-sm text-neutral-500 hover:text-neutral-600"
+                              href={option.href}
+                              key={optionIdx}
+                              className="text-sm text-neutral-600 hover:text-neutral-800 block"
                             >
                               {option.label}
-                            </label>
-                          </a>
-                        ))}
+                            </a>
+                          )
+                        )}
                       </div>
                     </DisclosurePanel>
                   </Disclosure>
@@ -431,19 +340,18 @@ export default function Example() {
                       <a href={category.href}>{category.name}</a>
                     </li>
                   ))}
-                {process.env.FEATURE_SEARCH_ENABLED && (
-                  <LocalizedClientLink
-                    className="hover:text-ui-fg-base"
-                    href="/search"
-                    scroll={false}
-                  >
-                    <div className="pt-6 select-none">
-                      <Input name={"Buscar..."} label={"Buscar..."} />
-                    </div>
-                  </LocalizedClientLink>
-                )}
+                  {process.env.FEATURE_SEARCH_ENABLED && (
+                    <LocalizedClientLink
+                      className="hover:text-ui-fg-base"
+                      href="/search"
+                      scroll={false}
+                    >
+                      <div className="pt-6 select-none">
+                        <Input name={"Buscar..."} label={"Buscar..."} />
+                      </div>
+                    </LocalizedClientLink>
+                  )}
                 </ul>
-
 
                 {filters.map((section) => (
                   <Disclosure
