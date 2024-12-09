@@ -11,6 +11,7 @@ import ProductInfo from "@modules/products/templates/product-info"
 import SkeletonRelatedProducts from "@modules/skeletons/templates/skeleton-related-products"
 import { notFound } from "next/navigation"
 import ProductActionsWrapper from "./product-actions-wrapper"
+import SizeGuideModal from "../components/size-guide-modal"
 
 type ProductTemplateProps = {
   product: PricedProduct
@@ -40,8 +41,10 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
           <div className="hidden sm:block">
             <ProductInfo product={product} />
           </div>
+          <div>
+            <SizeGuideModal />
+          </div>
           <ProductTabs product={product} />
-          <ProductOnboardingCta />
           <Suspense
             fallback={<ProductActions product={product} region={region} />}
           >

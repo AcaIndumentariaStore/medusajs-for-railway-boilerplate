@@ -95,8 +95,8 @@ export default function Example() {
           ],
         },
         {
-          value: "Calzado de Cuero Ecológico",
-          label: "Calzado de Cuero Ecológico",
+          value: "Calzado de Sandalias De Cuero Ecológico",
+          label: "Calzado de Sandalias De Cuero Ecológico",
           href: "",
           subOptions: [
             { label: "Ver Todos", href: "" },

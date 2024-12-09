@@ -15,6 +15,7 @@ import OptionSelect from "@modules/products/components/option-select"
 
 import MobileActions from "../mobile-actions"
 import ProductPrice from "../product-price"
+import SizeGuideModal from "../size-guide-modal"
 
 type ProductActionsProps = {
   product: PricedProduct
