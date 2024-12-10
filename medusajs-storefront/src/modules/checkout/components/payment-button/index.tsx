@@ -267,8 +267,6 @@ const TransferPaymentButton = ({ notReady }: { notReady: boolean }) => {
 }
 
 const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
-  const [triggerHiddenButton, setTriggerHiddenButton] = useState(false);
-
   const mercadoPago = useMercadopago.v2(MERCADOPAGO_PUBLIC_KEY, {
     locale: "es-AR",
   });
@@ -279,56 +277,22 @@ const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
     },
   });
 
-  const handleButtonClick = () => {
-    checkout.open(); // Abrir la ventana de Mercado Pago
-    setTriggerHiddenButton(true); // Disparar el botón oculto
+  const handlePaymentSuccess = () => {
+    const whatsappUrl = `https://wa.me/+5491169407581?text=Hola, acabo de realizar un pago y quiero confirmar mi orden.`;
+    window.location.href = whatsappUrl;
   };
 
   return (
-    <>
-      <Button
-        size="base"
-        onClick={handleButtonClick}
-      >
-        Pagar con Mercado Pago
-      </Button>
-      {/* Botón oculto que se activa cuando triggerHiddenButton es true */}
-      {triggerHiddenButton && (
-        <MercadoPagoCheckOutProPaymentButton notReady={false} />
-      )}
-    </>
-  );
-};
+    <Button
+      size="base"
+      onClick={() => {
+        checkout.open();
 
-const MercadoPagoCheckOutProPaymentButton = ({ notReady }: { notReady: boolean }) => {
-  const [submitting, setSubmitting] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
-  const onPaymentCompleted = async () => {
-    await placeOrder().catch((err) => {
-      setErrorMessage(err.toString());
-      setSubmitting(false);
-    });
-  };
-
-  const handlePayment = () => {
-    setSubmitting(true);
-    onPaymentCompleted();
-  };
-
-  // Ocultar el botón visualmente
-  return (
-    <div style={{ display: "none" }}>
-      <Button
-        disabled={notReady}
-        isLoading={submitting}
-        onClick={handlePayment}
-        size="large"
-      >
-        Realizar Pedido
-      </Button>
-      <ErrorMessage error={errorMessage} />
-    </div>
+        checkout.on('onApproved', handlePaymentSuccess);
+      }}
+    >
+      Pagar con Mercado Pago
+    </Button>
   );
 };
 
