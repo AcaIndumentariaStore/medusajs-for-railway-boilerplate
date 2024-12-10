@@ -40,7 +40,9 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ cart }) => {
     case "manual":
       return <ManualTestPaymentButton notReady={notReady} />
     case "mercadopago":
-      return <MercadoPagoButton notReady={notReady} session={paymentSession} />
+      return <MercadoPagoButton session={paymentSession} />
+    case "MercadoPagoCheckOutProPayment":
+      return <MercadoPagoCheckOutProPaymentButton notReady={notReady} />
     case "paypal":
       return <PayPalPaymentButton notReady={notReady} cart={cart} />
     default:
@@ -267,16 +269,39 @@ const TransferPaymentButton = ({ notReady }: { notReady: boolean }) => {
   )
 }
 
-const MercadoPagoButton = ({
-  session,
-  notReady,
-}: {
-  session: PaymentSession
-  notReady: boolean
-}) => {
+const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
   const mercadoPago = useMercadopago.v2(MERCADOPAGO_PUBLIC_KEY, {
     locale: "es-AR",
   })
+
+  const handleMercadoPagoCheckout = async () => {
+    // Seleccionar automáticamente MercadoPagoCheckOutPro
+    await placeOrder().catch((err) =>
+      console.error("Error al registrar el pedido:", err)
+    )
+
+    // Abrir el checkout de MercadoPago
+    const checkout = mercadoPago?.checkout({
+      preference: {
+        id: session.data.preferenceId,
+      },
+    })
+
+    checkout?.open()
+  }
+
+  return (
+    <Button size="base" onClick={handleMercadoPagoCheckout}>
+      Pagar con Mercado Pago
+    </Button>
+  )
+}
+
+const MercadoPagoCheckOutProPaymentButton = ({
+  notReady,
+}: {
+  notReady: boolean
+}) => {
   const [submitting, setSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
@@ -293,28 +318,19 @@ const MercadoPagoButton = ({
     onPaymentCompleted()
   }
 
-  const checkout = mercadoPago?.checkout({
-    preference: {
-      id: session.data.preferenceId,
-    },
-  })
-
-  const handleClick = () => {
-    handlePayment()
-    checkout.open()
-  }
-
   return (
     <>
-      <Button
-        size="base"
-        disabled={notReady}
-        isLoading={submitting}
-        onClick={handleClick}
-      >
-        Pagar con Mercado Pago
-      </Button>
-      <ErrorMessage error={errorMessage} />
+      <div className="hidden">
+        <Button
+          disabled={notReady}
+          isLoading={submitting}
+          onClick={handlePayment}
+          size="large"
+        >
+          Realizar Pedido
+        </Button>
+        <ErrorMessage error={errorMessage} />
+      </div>
     </>
   )
 }
