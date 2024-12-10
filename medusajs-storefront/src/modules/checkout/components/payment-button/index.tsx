@@ -267,6 +267,8 @@ const TransferPaymentButton = ({ notReady }: { notReady: boolean }) => {
 }
 
 const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
+  const [submitting, setSubmitting] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const mercadoPago = useMercadopago.v2(MERCADOPAGO_PUBLIC_KEY, {
     locale: "es-AR",
   });
@@ -277,15 +279,69 @@ const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
     },
   });
 
+  const handlePayment = async () => {
+    setSubmitting(true);
+    try {
+      // Registrar el pedido antes de redirigir al checkout de MercadoPago
+      await placeOrder();
+
+      // Abrir el checkout de MercadoPago
+      checkout.open();
+    } catch (error) {
+      setErrorMessage("Error al realizar el pedido. Intenta nuevamente.");
+      console.error(error);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
-    <Button
-      size="base"
-      onClick={() => checkout.open()}
-    >
-      Pagar con Mercado Pago
-    </Button>
+    <>
+      <Button
+        size="base"
+        onClick={handlePayment}
+        isLoading={submitting}
+        disabled={submitting}
+      >
+        Pagar con Mercado Pago
+      </Button>
+      {errorMessage && <ErrorMessage error={errorMessage} />}
+    </>
   );
 };
+
+
+const MercadoPagoCheckOutProPaymentButton = ({ notReady }: { notReady: boolean }) => {
+  const [submitting, setSubmitting] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+
+  const onPaymentCompleted = async () => {
+    await placeOrder().catch((err) => {
+      setErrorMessage(err.toString())
+      setSubmitting(false)
+    })
+  }
+
+  const handlePayment = () => {
+    setSubmitting(true)
+
+    onPaymentCompleted()
+  }
+
+  return (
+    <>
+      <Button
+        disabled={notReady}
+        isLoading={submitting}
+        onClick={handlePayment}
+        size="large"
+      >
+        Realizar Pedido
+      </Button>
+      <ErrorMessage error={errorMessage} />
+    </>
+  )
+}
 
 const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
   const [submitting, setSubmitting] = useState(false)
