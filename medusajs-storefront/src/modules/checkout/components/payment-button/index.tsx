@@ -277,25 +277,15 @@ const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
     },
   });
 
-  const handlePaymentSuccess = () => {
-    const whatsappUrl = `https://wa.me/+5491169407581?text=Hola, acabo de realizar un pago y quiero confirmar mi orden.`;
-    window.location.href = whatsappUrl;
-  };
-
   return (
     <Button
       size="base"
-      onClick={() => {
-        checkout.open();
-
-        checkout.on('onApproved', handlePaymentSuccess);
-      }}
+      onClick={() => checkout.open()}
     >
       Pagar con Mercado Pago
     </Button>
   );
 };
-
 
 const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
   const [submitting, setSubmitting] = useState(false)
