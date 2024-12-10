@@ -3,7 +3,7 @@
 import { Cart, PaymentSession } from "@medusajs/medusa"
 import { Button } from "@medusajs/ui"
 import { OnApproveActions, OnApproveData } from "@paypal/paypal-js"
-import { useMercadopago } from "react-sdk-mercadopago"
+import { useMercadopago } from "react-sdk-mercadopago";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
 import { placeOrder } from "@modules/checkout/actions"
@@ -11,8 +11,7 @@ import React, { useState } from "react"
 import ErrorMessage from "../error-message"
 import Spinner from "@modules/common/icons/spinner"
 
-const MERCADOPAGO_PUBLIC_KEY =
-  process.env.NEXT_PUBLIC_MERCADOPAGO_PUBLIC_KEY || ""
+const MERCADOPAGO_PUBLIC_KEY = process.env.NEXT_PUBLIC_MERCADOPAGO_PUBLIC_KEY || "";
 
 type PaymentButtonProps = {
   cart: Omit<Cart, "refundable_amount" | "refunded_total">
@@ -41,8 +40,6 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ cart }) => {
       return <ManualTestPaymentButton notReady={notReady} />
     case "mercadopago":
       return <MercadoPagoButton session={paymentSession} />
-    case "MercadoPagoCheckOutProPayment":
-      return <CombinedMercadoPagoButton session={paymentSession} notReady={notReady} />
     case "paypal":
       return <PayPalPaymentButton notReady={notReady} cart={cart} />
     default:
@@ -270,85 +267,71 @@ const TransferPaymentButton = ({ notReady }: { notReady: boolean }) => {
 }
 
 const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
+  const [triggerHiddenButton, setTriggerHiddenButton] = useState(false);
+
   const mercadoPago = useMercadopago.v2(MERCADOPAGO_PUBLIC_KEY, {
     locale: "es-AR",
-  })
+  });
 
-  const handleMercadoPagoCheckout = async () => {
-    // Seleccionar automáticamente MercadoPagoCheckOutPro
-    await placeOrder().catch((err) =>
-      console.error("Error al registrar el pedido:", err)
-    )
+  const checkout = mercadoPago?.checkout({
+    preference: {
+      id: session.data.preferenceId,
+    },
+  });
 
-    // Abrir el checkout de MercadoPago
-    const checkout = mercadoPago?.checkout({
-      preference: {
-        id: session.data.preferenceId,
-      },
-    })
-
-    checkout?.open()
-  }
-
-  return (
-    <Button size="base" onClick={handleMercadoPagoCheckout}>
-      Pagar con Mercado Pago
-    </Button>
-  )
-}
-
-const MercadoPagoCheckOutProPaymentButton = ({
-  notReady,
-}: {
-  notReady: boolean
-}) => {
-  const [submitting, setSubmitting] = useState(false)
-  const [errorMessage, setErrorMessage] = useState<string | null>(null)
-  const [hidden, setHidden] = useState(true)
-
-  const onPaymentCompleted = async () => {
-    await placeOrder().catch((err) => {
-      setErrorMessage(err.toString())
-      setSubmitting(false)
-    })
-  }
-
-  const handlePayment = () => {
-    setSubmitting(true)
-
-    onPaymentCompleted()
-  }
+  const handleButtonClick = () => {
+    checkout.open(); // Abrir la ventana de Mercado Pago
+    setTriggerHiddenButton(true); // Disparar el botón oculto
+  };
 
   return (
     <>
-      {!hidden && (
-        <Button
-          disabled={notReady}
-          isLoading={submitting}
-          onClick={handlePayment}
-          size="base"
-          style={{ display: "none" }}
-        >
-          Realizar Pedido
-        </Button>
+      <Button
+        size="base"
+        onClick={handleButtonClick}
+      >
+        Pagar con Mercado Pago
+      </Button>
+      {/* Botón oculto que se activa cuando triggerHiddenButton es true */}
+      {triggerHiddenButton && (
+        <MercadoPagoCheckOutProPaymentButton notReady={false} />
       )}
-      <ErrorMessage error={errorMessage} />
     </>
-  )
-}
+  );
+};
 
-const CombinedMercadoPagoButton = ({ 
-  session, 
-  notReady 
-}: { 
-  session: PaymentSession ,
-  notReady: boolean
-}) => (
-  <>
-    <MercadoPagoButton session={session} />
-    <MercadoPagoCheckOutProPaymentButton notReady={notReady} />
-  </>
-);
+const MercadoPagoCheckOutProPaymentButton = ({ notReady }: { notReady: boolean }) => {
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const onPaymentCompleted = async () => {
+    await placeOrder().catch((err) => {
+      setErrorMessage(err.toString());
+      setSubmitting(false);
+    });
+  };
+
+  const handlePayment = () => {
+    setSubmitting(true);
+    onPaymentCompleted();
+  };
+
+  // Ocultar el botón visualmente
+  return (
+    <div style={{ display: "none" }}>
+      <Button
+        disabled={notReady}
+        isLoading={submitting}
+        onClick={handlePayment}
+        size="large"
+      >
+        Realizar Pedido
+      </Button>
+      <ErrorMessage error={errorMessage} />
+    </div>
+  );
+};
+
 
 const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
   const [submitting, setSubmitting] = useState(false)
