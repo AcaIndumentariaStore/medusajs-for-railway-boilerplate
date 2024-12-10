@@ -1,440 +1,217 @@
-import React from "react"
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+import { BlurFade } from "@modules/magic-ui/Blur-fade";
+
+import CalzadosDeTela from "../../../../images/colecciones/CalzadosDeTela.png";
+import CalzadosDeCuero from "../../../../images/colecciones/CalzadosDeCuero.png";
+import CalzadosDeInvierno from "../../../../images/colecciones/CalzadosDeInvierno.png";
+import CalzadosDeNinos from "../../../../images/colecciones/CalzadosDeNinos.png";
+import SandaliasEcoCuero from "../../../../images/colecciones/SandaliasEcoCuero.png";
+import Zapatillas from "../../../../images/colecciones/Zapatillas.png";
+import UltimosPares from "../../../../images/colecciones/UltimosPares.png";
 
 function Index() {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12 content-container py-12">
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
-          >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
+    <div id="colecciones" className="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-12 content-container py-12">
+      <a href="/collections/tela">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
         >
-          Nombre Coleccion
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={CalzadosDeTela.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
           >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+              Calzados de tela
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
+
+      <a href="/collections/cuero-vacuno">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
         >
-          Nombre Coleccion
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={CalzadosDeCuero.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
           >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+              Calzados de cuero
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
+
+      <a href="/collections/temporada-invierno">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
         >
-          Nombre Coleccion
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={CalzadosDeInvierno.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
           >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+              Calzados de Invierno
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
+
+      <a href="/collections/ninos">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
         >
-          Nombre Coleccion
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={CalzadosDeNinos.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
           >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+              Calzados de niños
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
+
+      <a href="/collections/cuero-ecologico">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
         >
-          Nombre Coleccion
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={SandaliasEcoCuero.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
           >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+              Sandalias Ecocuero
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
+
+      <a href="/collections/zapatillas">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
         >
-          Nombre Coleccion
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={Zapatillas.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
           >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+            Zapatillas
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
+
+      <a href="/collections/en-liquidacion">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
         >
-          Nombre Coleccion
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={UltimosPares.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
           >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
-        >
-          Nombre Coleccion
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
-          >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
-        >
-          Nombre Coleccion
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-row items-center justify-center h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            color="#a2d1ad"
-            fill="none"
-          >
-            <path
-              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <circle
-              cx="16.5"
-              cy="7.5"
-              r="1.5"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <path
-              d="M16 22C15.3805 19.7749 13.9345 17.7821 11.8765 16.3342C9.65761 14.7729 6.87163 13.9466 4.01569 14.0027C3.67658 14.0019 3.33776 14.0127 3 14.0351"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M13 18C14.7015 16.6733 16.5345 15.9928 18.3862 16.0001C19.4362 15.999 20.4812 16.2216 21.5 16.6617"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <a
-          href="/"
-          className="bg-white hover:bg-aca-green hover:text-white border-2 border-aca-green px-4 py-3 text-center text-aca-green mt-3 rounded-md uppercase w-full transition ease-in-out delay-150 duration-300"
-        >
-          Nombre Coleccion
-        </a>
-      </div>
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+              Últimos pares
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
     </div>
-  )
+  );
 }
 
-export default Index
+export default Index;
