@@ -21,7 +21,7 @@ export default async function Footer() {
               />
             </LocalizedClientLink>
           </div>
-          <div className="text-small-regular gap-10 md:gap-x-36 grid grid-cols-2 sm:grid-cols-4">
+          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
             <div className="flex flex-col gap-y-2">
               <span className="text-base font-semibold text-aca-green">
                 Inicio
@@ -30,7 +30,7 @@ export default async function Footer() {
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/mas-vendidos`}
                   >
                     Más Vendidos
                   </LocalizedClientLink>
@@ -38,7 +38,7 @@ export default async function Footer() {
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/ofertas`}
                   >
                     Ofertas
                   </LocalizedClientLink>
@@ -46,7 +46,7 @@ export default async function Footer() {
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/#colecciones`}
                   >
                     Colecciones
                   </LocalizedClientLink>
@@ -61,57 +61,17 @@ export default async function Footer() {
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/remerones-animados`}
                   >
-                    Ropa de Dormir
+                    Remerones Animados
                   </LocalizedClientLink>
                 </li>
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/buzos-animados`}
                   >
-                    Camisones de pijama
-                  </LocalizedClientLink>
-                </li>
-                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
-                  <LocalizedClientLink
-                    className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
-                  >
-                    Remerones animados
-                  </LocalizedClientLink>
-                </li>
-                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
-                  <LocalizedClientLink
-                    className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
-                  >
-                    Abrigos
-                  </LocalizedClientLink>
-                </li>
-                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
-                  <LocalizedClientLink
-                    className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
-                  >
-                    Sacos
-                  </LocalizedClientLink>
-                </li>
-                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
-                  <LocalizedClientLink
-                    className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
-                  >
-                    Maxisweaters
-                  </LocalizedClientLink>
-                </li>
-                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
-                  <LocalizedClientLink
-                    className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
-                  >
-                    Buzos
+                    Buzos Animados
                   </LocalizedClientLink>
                 </li>
               </ul>
@@ -124,49 +84,88 @@ export default async function Footer() {
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/temporada-invierno`}
                   >
-                    Calzado Infantil
+                    Temporada Invierno
                   </LocalizedClientLink>
                 </li>
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/ninos`}
                   >
-                    Zapatillas
+                    Calzado Para Niños
                   </LocalizedClientLink>
                 </li>
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/tela`}
                   >
-                    Zapatos y Chatitas
+                    Calzado de Tela
                   </LocalizedClientLink>
                 </li>
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/cuero-ecologico`}
                   >
-                    Zuecos y Chavitos
+                    Sandalias Cuero Ecologico
                   </LocalizedClientLink>
                 </li>
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/cuero-vacuno`}
                   >
-                    Botas, Texanas y Borcegos
+                    Calzado Cuero Vacuno
                   </LocalizedClientLink>
                 </li>
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
-                    href={`/categories/`}
+                    href={`/collections/en-liquidacion`}
                   >
-                    Sienna con strass
+                    Ultimos Pares!
+                  </LocalizedClientLink>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <span className="text-base font-semibold text-aca-green">
+                Tejidos Artesanales
+              </span>
+              <ul className="grid grid-cols-1 gap-4">
+                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base")}
+                    href={`/collections/`}
+                  >
+                    A
+                  </LocalizedClientLink>
+                </li>
+                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base")}
+                    href={`/collections/`}
+                  >
+                    B
+                  </LocalizedClientLink>
+                </li>
+                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base")}
+                    href={`/collections/`}
+                  >
+                    C
+                  </LocalizedClientLink>
+                </li>
+                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base")}
+                    href={`/collections/`}
+                  >
+                    D
                   </LocalizedClientLink>
                 </li>
               </ul>

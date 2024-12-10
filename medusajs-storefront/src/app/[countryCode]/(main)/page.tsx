@@ -11,6 +11,7 @@ import MarketingSpace from "@modules/home/components/marketing-space"
 import SocialNetworks from "@modules/home/components/social-networks"
 import Collections from "@modules/home/components/collections"
 import ShowroomModal from "@modules/home/components/showroom-modal"
+import Faq from "@modules/home/components/faq"
 
 export const metadata: Metadata = {
   title: "Aca Indumentaria | ¡Encontrá tu estilo con nosotros!",
@@ -106,6 +107,7 @@ export default async function Home({
         <MarketingSpace />
         <SocialNetworks />
         <Collections />
+        <Faq />
       </div>
     </>
   )

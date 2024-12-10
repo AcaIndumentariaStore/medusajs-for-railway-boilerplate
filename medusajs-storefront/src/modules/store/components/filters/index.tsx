@@ -95,8 +95,8 @@ export default function Example() {
           ],
         },
         {
-          value: "Calzado de Sandalias De Cuero Ecológico",
-          label: "Calzado de Sandalias De Cuero Ecológico",
+          value: "Sandalias De Cuero Ecológico",
+          label: "Sandalias De Cuero Ecológico",
           href: "",
           subOptions: [
             { label: "Ver Todos", href: "" },
@@ -132,6 +132,27 @@ export default function Example() {
           value: "",
           label: "En liquidación",
           href: "/collections/en-liquidacion",
+        },
+      ],
+    },
+    {
+      id: "tejidos-artesanales",
+      name: "Tejidos Artesanales",
+      options: [
+        {
+          value: "",
+          label: "Hombres",
+          href: "/prendas/hombres",
+        },
+        {
+          value: "",
+          label: "Mujeres",
+          href: "/prendas/mujeres",
+        },
+        {
+          value: "",
+          label: "Niños",
+          href: "/prendas/ninos",
         },
       ],
     },
@@ -355,50 +376,77 @@ export default function Example() {
 
                 {filters.map((section) => (
                   <Disclosure
-                    key={section.id}
-                    as="div"
-                    className="border-b border-neutral-200 py-6"
-                  >
-                    <h3 className="-my-3 flow-root">
-                      <DisclosureButton className="group flex w-full items-center justify-between bg-white py-3 text-sm text-neutral-400 hover:text-neutral-500">
-                        <span className="flex flex-row items-center font-medium text-neutral-800">
-                          {section.name}
-                        </span>
-                        <span className="ml-6 flex items-center">
-                          <PlusIcon
-                            aria-hidden="true"
-                            className="h-5 w-5 group-data-[open]:hidden"
-                          />
-                          <MinusIcon
-                            aria-hidden="true"
-                            className="h-5 w-5 [.group:not([data-open])_&]:hidden"
-                          />
-                        </span>
-                      </DisclosureButton>
-                    </h3>
-                    <DisclosurePanel className="pt-6">
-                      <div className="space-y-4">
-                        {section.options.map((option, optionIdx) => (
+                  key={section.id}
+                  as="div"
+                  className="border-t border-neutral-200 px-4 py-6"
+                >
+                  <h3 className="-mx-2 -my-3 flow-root">
+                    <DisclosureButton className="group flex w-full items-center justify-between bg-white px-2 py-3 text-neutral-400 hover:text-neutral-500">
+                      <span className="flex flex-row items-center font-medium text-neutral-800">
+                        {section.name}
+                      </span>
+                      <span className="ml-6 flex items-center">
+                        <PlusIcon
+                          aria-hidden="true"
+                          className="h-5 w-5 group-data-[open]:hidden"
+                        />
+                        <MinusIcon
+                          aria-hidden="true"
+                          className="h-5 w-5 [.group:not([data-open])_&]:hidden"
+                        />
+                      </span>
+                    </DisclosureButton>
+                  </h3>
+                  <DisclosurePanel className="pt-6">
+                    <div className="space-y-4">
+                      {section.options.map((option, optionIdx) =>
+                        option.subOptions ? (
+                          <Disclosure key={optionIdx} as="div" className="">
+                            <h4 className="-mx-2 -my-3 flow-root">
+                              <DisclosureButton className="group flex w-full items-center justify-between bg-white px-2 py-3 text-neutral-400 hover:text-neutral-500">
+                                <span className="text-sm text-neutral-800">
+                                  {option.label}
+                                </span>
+                                <span className="ml-6 flex items-center">
+                                  <PlusIcon
+                                    aria-hidden="true"
+                                    className="h-4 w-4 group-data-[open]:hidden"
+                                  />
+                                  <MinusIcon
+                                    aria-hidden="true"
+                                    className="h-4 w-4 [.group:not([data-open])_&]:hidden"
+                                  />
+                                </span>
+                              </DisclosureButton>
+                            </h4>
+                            <DisclosurePanel className="pt-4">
+                              <ul className="space-y-2">
+                                {option.subOptions.map((subOption) => (
+                                  <li key={subOption.href}>
+                                    <a
+                                      href={subOption.href}
+                                      className="text-sm text-neutral-600 hover:text-neutral-800"
+                                    >
+                                      {subOption.label}
+                                    </a>
+                                  </li>
+                                ))}
+                              </ul>
+                            </DisclosurePanel>
+                          </Disclosure>
+                        ) : (
                           <a
                             href={option.href}
-                            key={option.href}
-                            className="flex items-center cursor-pointer"
+                            key={optionIdx}
+                            className="text-sm text-neutral-600 hover:text-neutral-800 block"
                           >
-                            <a
-                              defaultValue={option.value}
-                              id={`filter-${section.id}-${optionIdx}`}
-                            />
-                            <label
-                              htmlFor={`filter-${section.id}-${optionIdx}`}
-                              className="text-sm text-neutral-500 hover:text-neutral-600 cursor-pointer"
-                            >
-                              {option.label}
-                            </label>
+                            {option.label}
                           </a>
-                        ))}
-                      </div>
-                    </DisclosurePanel>
-                  </Disclosure>
+                        )
+                      )}
+                    </div>
+                  </DisclosurePanel>
+                </Disclosure>
                 ))}
               </form>
             </div>

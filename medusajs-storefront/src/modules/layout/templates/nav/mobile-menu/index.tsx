@@ -55,6 +55,15 @@ const navigation = {
             { name: "Sacos de Lana", href: "#" },
           ],
         },
+        {
+          id: "tejidos-artesanales",
+          name: "Tejidos Artesanales",
+          items: [
+            { name: "Buzos Frizados", href: "#" },
+            { name: "Buzos Peluche", href: "#" },
+            { name: "Sacos de Lana", href: "#" },
+          ],
+        },
       ],
     },
     {
@@ -81,12 +90,17 @@ const navigation = {
           id: "calzado",
           name: "Encontrá tu Calzado Ideal",
           items: [
-            { name: "Temporada Invierno", href: "/collections/temporada-invierno" },
+            {
+              name: "Temporada Invierno",
+              href: "/collections/temporada-invierno",
+            },
             { name: "Para Niños", href: "/collections/ninos" },
             { name: "De Tela", href: "/collections/" },
-            { name: "De Sandalias De Cuero Ecológico", href: "/collections/cuero-ecologico" },
+            {
+              name: "De Sandalias De Cuero Ecológico",
+              href: "/collections/cuero-ecologico",
+            },
             { name: "De Cuero Vacuno", href: "/collections/cuero-vacuno" },
-
           ],
         },
       ],
