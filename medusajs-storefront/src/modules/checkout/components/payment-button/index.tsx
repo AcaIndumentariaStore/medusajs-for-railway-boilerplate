@@ -40,7 +40,7 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ cart }) => {
     case "manual":
       return <ManualTestPaymentButton notReady={notReady} />
     case "mercadopago":
-      return <MercadoPagoButton session={paymentSession} />
+      return <MercadoPagoButton notReady={notReady} session={paymentSession} />
     case "paypal":
       return <PayPalPaymentButton notReady={notReady} cart={cart} />
     default:
@@ -267,7 +267,13 @@ const TransferPaymentButton = ({ notReady }: { notReady: boolean }) => {
   )
 }
 
-const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
+const MercadoPagoButton = ({
+  session,
+  notReady,
+}: {
+  session: PaymentSession
+  notReady: boolean
+}) => {
   const mercadoPago = useMercadopago.v2(MERCADOPAGO_PUBLIC_KEY, {
     locale: "es-AR",
   })
@@ -302,6 +308,7 @@ const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
     <>
       <Button
         size="base"
+        disabled={notReady}
         isLoading={submitting}
         onClick={handleClick}
       >
@@ -311,7 +318,6 @@ const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
     </>
   )
 }
-
 
 const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
   const [submitting, setSubmitting] = useState(false)
