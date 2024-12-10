@@ -3,7 +3,7 @@
 import { Cart, PaymentSession } from "@medusajs/medusa"
 import { Button } from "@medusajs/ui"
 import { OnApproveActions, OnApproveData } from "@paypal/paypal-js"
-import { useMercadopago } from "react-sdk-mercadopago";
+import { useMercadopago } from "react-sdk-mercadopago"
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
 import { placeOrder } from "@modules/checkout/actions"
@@ -11,7 +11,8 @@ import React, { useState } from "react"
 import ErrorMessage from "../error-message"
 import Spinner from "@modules/common/icons/spinner"
 
-const MERCADOPAGO_PUBLIC_KEY = process.env.NEXT_PUBLIC_MERCADOPAGO_PUBLIC_KEY || "";
+const MERCADOPAGO_PUBLIC_KEY =
+  process.env.NEXT_PUBLIC_MERCADOPAGO_PUBLIC_KEY || ""
 
 type PaymentButtonProps = {
   cart: Omit<Cart, "refundable_amount" | "refunded_total">
@@ -267,51 +268,9 @@ const TransferPaymentButton = ({ notReady }: { notReady: boolean }) => {
 }
 
 const MercadoPagoButton = ({ session }: { session: PaymentSession }) => {
-  const [submitting, setSubmitting] = useState(false)
-  const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const mercadoPago = useMercadopago.v2(MERCADOPAGO_PUBLIC_KEY, {
     locale: "es-AR",
-  });
-
-  const checkout = mercadoPago?.checkout({
-    preference: {
-      id: session.data.preferenceId,
-    },
-  });
-
-  const handlePayment = async () => {
-    setSubmitting(true);
-    try {
-      // Registrar el pedido antes de redirigir al checkout de MercadoPago
-      await placeOrder();
-
-      // Abrir el checkout de MercadoPago
-      checkout.open();
-    } catch (error) {
-      setErrorMessage("Error al realizar el pedido. Intenta nuevamente.");
-      console.error(error);
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  return (
-    <>
-      <Button
-        size="base"
-        onClick={handlePayment}
-        isLoading={submitting}
-        disabled={submitting}
-      >
-        Pagar con Mercado Pago
-      </Button>
-      {errorMessage && <ErrorMessage error={errorMessage} />}
-    </>
-  );
-};
-
-
-const MercadoPagoCheckOutProPaymentButton = ({ notReady }: { notReady: boolean }) => {
+  })
   const [submitting, setSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
@@ -328,20 +287,31 @@ const MercadoPagoCheckOutProPaymentButton = ({ notReady }: { notReady: boolean }
     onPaymentCompleted()
   }
 
+  const checkout = mercadoPago?.checkout({
+    preference: {
+      id: session.data.preferenceId,
+    },
+  })
+
+  const handleClick = () => {
+    handlePayment()
+    checkout.open()
+  }
+
   return (
     <>
       <Button
-        disabled={notReady}
+        size="base"
         isLoading={submitting}
-        onClick={handlePayment}
-        size="large"
+        onClick={handleClick}
       >
-        Realizar Pedido
+        Pagar con Mercado Pago
       </Button>
       <ErrorMessage error={errorMessage} />
     </>
   )
 }
+
 
 const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
   const [submitting, setSubmitting] = useState(false)
