@@ -42,7 +42,7 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ cart }) => {
     case "mercadopago":
       return <MercadoPagoButton session={paymentSession} />
     case "MercadoPagoCheckOutProPayment":
-      return <MercadoPagoCheckOutProPaymentButton notReady={notReady} />
+      return <CombinedMercadoPagoButton session={paymentSession} notReady={notReady} />
     case "paypal":
       return <PayPalPaymentButton notReady={notReady} cart={cart} />
     default:
@@ -304,6 +304,7 @@ const MercadoPagoCheckOutProPaymentButton = ({
 }) => {
   const [submitting, setSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const [hidden, setHidden] = useState(true)
 
   const onPaymentCompleted = async () => {
     await placeOrder().catch((err) => {
@@ -320,20 +321,34 @@ const MercadoPagoCheckOutProPaymentButton = ({
 
   return (
     <>
-      <div className="hidden">
+      {!hidden && (
         <Button
           disabled={notReady}
           isLoading={submitting}
           onClick={handlePayment}
-          size="large"
+          size="base"
+          style={{ display: "none" }}
         >
           Realizar Pedido
         </Button>
-        <ErrorMessage error={errorMessage} />
-      </div>
+      )}
+      <ErrorMessage error={errorMessage} />
     </>
   )
 }
+
+const CombinedMercadoPagoButton = ({ 
+  session, 
+  notReady 
+}: { 
+  session: PaymentSession ,
+  notReady: boolean
+}) => (
+  <>
+    <MercadoPagoButton session={session} />
+    <MercadoPagoCheckOutProPaymentButton notReady={notReady} />
+  </>
+);
 
 const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
   const [submitting, setSubmitting] = useState(false)
