@@ -1,9 +1,6 @@
 "use client"
 import { Fragment, useState } from "react"
-import Image from "next/image"
 import { Dialog, Transition } from "@headlessui/react"
-
-import SizeGuideImage from "../../../../images/SizeGuideImage.png";
 
 export default function SizeGuideModal() {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,11 +12,12 @@ export default function SizeGuideModal() {
     <>
       <button
         onClick={openModal}
-        className="text-aca-grey underline hover:text-aca-strong-green rounded-md"
+        className="text-gray-600 underline hover:text-aca-strong-green rounded-md"
       >
-        Guía de Talles Calzado
+        Guía de Talles Prendas de Vestir
       </button>
 
+      {/* Modal */}
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="fixed inset-0 z-50" onClose={closeModal}>
           <Transition.Child
@@ -57,48 +55,25 @@ export default function SizeGuideModal() {
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"
                 >
-                  Guía de Talles para Calzado
+                  Guía de Talles para Prendas de Vestir
                 </Dialog.Title>
 
                 <div className="mt-4">
-                  <p className="text-sm text-gray-500">
-                    Para determinar tu talle de calzado:
+                  <p className="text-sm text-gray-500 mb-4">
+                    Consulta las medidas para nuestras prendas:
                   </p>
+                  
+                  <h4 className="font-semibold text-gray-800">Maxibuzos Animados</h4>
                   <ul className="mt-2 list-disc list-inside text-sm text-gray-500">
-                    <li>
-                      Coloca una hoja de papel en el suelo, contra una pared.
-                    </li>
-                    <li>
-                      Sitúa tu pie descalzo sobre la hoja con el talón tocando
-                      la pared.
-                    </li>
-                    <li>Marca la punta del dedo más largo con un lápiz.</li>
-                    <li>
-                      Mide la distancia entre el borde de la hoja y la marca en
-                      centímetros.
-                    </li>
-                    <li>
-                      Usa esta medida para encontrar tu talla en nuestra tabla
-                      de talles.
-                    </li>
-                    <li>
-                      La{" "}
-                      <span className="font-semibold text-aca-strong-green">
-                        tabla de talles
-                      </span>{" "}
-                      de cada calzado esta en la{" "}
-                      <span className="font-semibold text-aca-strong-green">
-                        ultima imagen
-                      </span>{" "}
-                      del carrusel del producto.
-                    </li>
+                    <li><strong>Talle S:</strong> 70 cm largo, 54 cm ancho</li>
+                    <li><strong>Talle M/L:</strong> 72 cm largo, 56 cm ancho</li>
+                    <li><strong>Talle XL/XXL:</strong> 82 cm largo, 60 cm ancho</li>
                   </ul>
 
-                  <div className="mt-6 flex justify-center">
-                    <div className="h-72 w-72 bg-gray-100 border border-gray-300 flex items-center justify-center">
-                      <Image src={SizeGuideImage} alt="Size Guide calzado" />
-                    </div>
-                  </div>
+                  <h4 className="mt-4 font-semibold text-gray-800">Remerones Animados</h4>
+                  <ul className="mt-2 list-disc list-inside text-sm text-gray-500">
+                    <li><strong>Talle Único:</strong> 80 cm largo, 56 cm ancho</li>
+                  </ul>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
