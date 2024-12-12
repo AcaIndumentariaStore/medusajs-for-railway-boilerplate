@@ -4,7 +4,6 @@ import React, { Suspense } from "react"
 
 import ImageGallery from "@modules/products/components/image-gallery"
 import ProductActions from "@modules/products/components/product-actions"
-import ProductOnboardingCta from "@modules/products/components/product-onboarding-cta"
 import ProductTabs from "@modules/products/components/product-tabs"
 import RelatedProducts from "@modules/products/components/related-products"
 import ProductInfo from "@modules/products/templates/product-info"
@@ -12,6 +11,7 @@ import SkeletonRelatedProducts from "@modules/skeletons/templates/skeleton-relat
 import { notFound } from "next/navigation"
 import ProductActionsWrapper from "./product-actions-wrapper"
 import SizeGuideModal from "../components/size-guide-modal"
+import ClothesGuideModal from "../components/clothes-guide-modal"
 
 type ProductTemplateProps = {
   product: PricedProduct
@@ -41,8 +41,9 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
           <div className="hidden sm:block">
             <ProductInfo product={product} />
           </div>
-          <div>
+          <div className="flex flex-row items-center space-x-1 md:space-x-2">
             <SizeGuideModal />
+            <ClothesGuideModal />
           </div>
           <ProductTabs product={product} />
           <Suspense
