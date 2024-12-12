@@ -24,19 +24,313 @@ export default function Example() {
       name: "Prendas",
       options: [
         {
-          value: "",
-          label: "Hombres",
-          href: "/prendas/hombres",
+          value: "Remerones Animados",
+          label: "Remerones Animados",
+          href: "",
+          subOptions: [
+            { label: "Ver Todo", href: "/collections/remerones-animados" },
+            {
+              label: "Remeron Animado Anime",
+              href: "/products/remeron-animado-anime",
+            },
+            {
+              label: "Remeron Animado Barbie",
+              href: "/products/remeron-animado-barbie",
+            },
+            {
+              label: "Remeron Animado Betty Boop",
+              href: "/products/remeron-animado-betty-boop",
+            },
+            {
+              label: "Remeron Animado Chuckie",
+              href: "/products/remeron-animado-chuckie",
+            },
+            {
+              label: "Remeron Animado Garfield",
+              href: "/products/remeron-animado-garfield",
+            },
+            {
+              label: "Remeron Animado Garfield 02",
+              href: "/products/remeron-animado-garfield-02",
+            },
+            {
+              label: "Remeron Animado Girl Power",
+              href: "/products/remeron-animado-girl-power",
+            },
+            {
+              label: "Remeron Animado Hello Kitty",
+              href: "/products/remeron-animado-hello-kitty",
+            },
+            {
+              label: "Remeron Animado Homero",
+              href: "/products/remeron-animado-homero",
+            },
+            {
+              label: "Remeron Animado Hunter",
+              href: "/products/remeron-animado-hunter",
+            },
+            {
+              label: "Remeron Animado Lisa",
+              href: "/products/remeron-animado-lisa",
+            },
+            {
+              label: "Remeron Animado Mickey and Minnie",
+              href: "/products/remeron-animado-mickey-and-minnie",
+            },
+            {
+              label: "Remeron Animado Mickey Classic",
+              href: "/products/remeron-animado-mickey-classic",
+            },
+            {
+              label: "Remeron Animado Mickey Mouse",
+              href: "/products/remeron-animado-mickey-mouse",
+            },
+            {
+              label: "Remeron Animado Mickey Mouse Blanco",
+              href: "/products/remeron-animado-mickey-mouse-blanco",
+            },
+            {
+              label: "Remeron Animado Mickey Mouse Salmon",
+              href: "/products/remeron-animado-mickey-mouse-salmon",
+            },
+            {
+              label: "Remeron Animado Naruto",
+              href: "/products/remeron-animado-naruto",
+            },
+            {
+              label: "Remeron Animado Peanuts",
+              href: "/products/remeron-animado-peanuts",
+            },
+            {
+              label: "Remeron Animado Peanuts 02",
+              href: "/products/remeron-animado-peanuts-02",
+            },
+            {
+              label: "Remeron Animado Rugrats",
+              href: "/products/remeron-animado-rugrats",
+            },
+            {
+              label: "Remeron Animado Rugrats 02",
+              href: "/products/remeron-animado-rugrats-02",
+            },
+            {
+              label: "Remeron Animado Rugrats 03",
+              href: "/products/remeron-animado-rugrats-03",
+            },
+            {
+              label: "Remeron Animado Rugrats 04",
+              href: "/products/remeron-animado-rugrats-04",
+            },
+            {
+              label: "Remeron Animado Rugrats 05",
+              href: "/products/remeron-animado-rugrats-05",
+            },
+            {
+              label: "Remeron Animado Scooby Doo",
+              href: "/products/remeron-animado-scooby-doo",
+            },
+            {
+              label: "Remeron Animado Scooby Doo 02",
+              href: "/products/remeron-animado-scooby-doo-02",
+            },
+            {
+              label: "Remeron Animado Space Jam",
+              href: "/products/remeron-animado-space-jam",
+            },
+            {
+              label: "Remeron Animado Stitch",
+              href: "/products/remeron-animado-stitch",
+            },
+            {
+              label: "Remeron Animado Winnie Pooh",
+              href: "/products/remeron-animado-winnie-pooh",
+            },
+          ],
         },
         {
-          value: "",
-          label: "Mujeres",
-          href: "/prendas/mujeres",
-        },
-        {
-          value: "",
-          label: "Niños",
-          href: "/prendas/ninos",
+          value: "Buzos Animados",
+          label: "Buzos Animados",
+          href: "",
+          subOptions: [
+            { label: "Ver Todo", href: "/collections/buzos-animados" },
+            {
+              label: "Buzo Animado Betty Boop",
+              href: "/products/buzo-animado-betty-boop",
+            },
+            {
+              label: "Buzo Animado Bob Esponja",
+              href: "/products/buzo-animado-bob-esponja",
+            },
+            {
+              label: "Buzo Animado Bob Esponja 02",
+              href: "/products/buzo-animado-bob-esponja-02",
+            },
+            {
+              label: "Buzo Animado Bob Esponja 03",
+              href: "/products/buzo-animado-bob-esponja-03",
+            },
+            {
+              label: "Buzo Animado Bob Esponja 04",
+              href: "/products/buzo-animado-bob-esponja-04",
+            },
+            {
+              label: "Buzo Animado Courage",
+              href: "/products/buzo-animado-courage",
+            },
+            {
+              label: "Buzo Animado Daisy Duck",
+              href: "/products/buzo-animado-daisy-duck",
+            },
+            {
+              label: "Buzo Animado Disney",
+              href: "/products/buzo-animado-disney",
+            },
+            {
+              label: "Buzo Animado Garfield",
+              href: "/products/buzo-animado-garfield",
+            },
+            {
+              label: "Buzo Animado Girl Power",
+              href: "/products/buzo-animado-girl-power",
+            },
+            {
+              label: "Buzo Animado Girl Power 02",
+              href: "/products/buzo-animado-girl-power-02",
+            },
+            {
+              label: "Buzo Animado Goofy",
+              href: "/products/buzo-animado-goofy",
+            },
+            {
+              label: "Buzo Animado Griego",
+              href: "/products/buzo-animado-griego",
+            },
+            {
+              label: "Buzo Animado Hatsune Miku",
+              href: "/products/buzo-animado-hatsune-miku",
+            },
+            {
+              label: "Buzo Animado Hello Kitty",
+              href: "/products/buzo-animado-hello-kitty",
+            },
+            {
+              label: "Buzo Animado Jerry",
+              href: "/products/buzo-animado-jerry",
+            },
+            {
+              label: "Buzo Animado Mafalda",
+              href: "/products/buzo-animado-mafalda",
+            },
+            {
+              label: "Buzo Animado Mario Bros",
+              href: "/products/buzo-animado-mario-bros",
+            },
+            {
+              label: "Buzo Animado Mario Bros 02",
+              href: "/products/buzo-animado-mario-bros-02",
+            },
+            {
+              label: "Buzo Animado Minnie and Daisy",
+              href: "/products/buzo-animado-minnie-and-daisy",
+            },
+            {
+              label: "Buzo Animado Minnie Lakers",
+              href: "/products/buzo-animado-minnie-lakers",
+            },
+            {
+              label: "Buzo Animado Mickey Mouse",
+              href: "/products/buzo-animado-mickey-mouse",
+            },
+            {
+              label: "Buzo Animado Mickey Mouse 02",
+              href: "/products/buzo-animado-mickey-mouse-02",
+            },
+            {
+              label: "Buzo Animado Mickey Mouse 03",
+              href: "/products/buzo-animado-mickey-mouse-03",
+            },
+            {
+              label: "Buzo Animado Mickey Mouse 04",
+              href: "/products/buzo-animado-mickey-mouse-04",
+            },
+            {
+              label: "Buzo Animado Mickey Mouse 05",
+              href: "/products/buzo-animado-mickey-mouse-05",
+            },
+            {
+              label: "Buzo Animado Mickey Mouse 06",
+              href: "/products/buzo-animado-mickey-mouse-06",
+            },
+            {
+              label: "Buzo Animado Mickey's",
+              href: "/products/buzo-animado-mickeys",
+            },
+            {
+              label: "Buzo Animado Monsters Inc",
+              href: "/products/buzo-animado-monsters-inc",
+            },
+            {
+              label: "Buzo Animado Muñecas",
+              href: "/products/buzo-animado-munecas",
+            },
+            {
+              label: "Buzo Animado Naruto",
+              href: "/products/buzo-animado-naruto",
+            },
+            {
+              label: "Buzo Animado Naruto 02",
+              href: "/products/buzo-animado-naruto-02",
+            },
+            {
+              label: "Buzo Animado Ositos",
+              href: "/products/buzo-animado-ositos",
+            },
+            {
+              label: "Buzo Animado Ositos 02",
+              href: "/products/buzo-animado-ositos-02",
+            },
+            {
+              label: "Buzo Animado Ositos 03",
+              href: "/products/buzo-animado-ositos-03",
+            },
+            {
+              label: "Buzo Animado Ositos Cariñositos",
+              href: "/products/buzo-animado-ositos-carinositos",
+            },
+            { label: "Buzo Animado Oso", href: "/products/buzo-animado-oso" },
+            {
+              label: "Buzo Animado Pluto",
+              href: "/products/buzo-animado-pluto",
+            },
+            {
+              label: "Buzo Animado Rugrats",
+              href: "/products/buzo-animado-rugrats",
+            },
+            {
+              label: "Buzo Animado Rugrats 02",
+              href: "/products/buzo-animado-rugrats-02",
+            },
+            {
+              label: "Buzo Animado Speedy",
+              href: "/products/buzo-animado-speedy",
+            },
+            {
+              label: "Buzo Animado Super Mario",
+              href: "/products/buzo-animado-super-mario",
+            },
+            {
+              label: "Buzo Animado Tigger",
+              href: "/products/buzo-animado-tigger",
+            },
+            {
+              label: "Buzo Animado Tweets",
+              href: "/products/buzo-animado-tweets",
+            },
+            {
+              label: "Buzo Animado Versace",
+              href: "/products/buzo-animado-versace",
+            },
+          ],
         },
       ],
     },
@@ -49,15 +343,36 @@ export default function Example() {
           label: "Temporada Invierno",
           href: "",
           subOptions: [
-            { label: "Ver Todos", href: "" },
-            { label: "Botas de Tela Acolchonada Sienna con Strass", href: "" },
-            { label: "Botas de Tela Acolchonada Sienna", href: "" },
-            { label: "Chavitos de Tela Gamuzada", href: "" },
-            { label: "Pantubotas Altas Estilo Australiano", href: "" },
-            { label: "Pantubotas Cortas", href: "" },
-            { label: "Pantubotas Wallabys Sin Pelo", href: "" },
-            { label: "Pantubotas Wallabys Con Pelo", href: "" },
-            { label: "Zuecos Birken forrados en Corderito Con Piel", href: "" },
+            { label: "Ver Todo", href: "/collections/temporada-invierno" },
+            {
+              label: "Botas de Tela Acolchonada Sienna",
+              href: "/products/botas-de-tela-acolchonada-sienna",
+            },
+            {
+              label: "Botas de Tela Acolchonada Sienna con Strass",
+              href: "/products/botas-de-tela-acolchonada-sienna-con-strass",
+            },
+            {
+              label: "Chavitos de Tela Gamuzada",
+              href: "/products/chavitos-de-tela-gamuzada",
+            },
+            {
+              label: "Pantubotas Altas Estilo Australiano",
+              href: "/products/pantubotas-altas-estilo-australiano",
+            },
+            { label: "Pantubotas Cortas", href: "/products/pantubotas-cortas" },
+            {
+              label: "Pantubotas Wallabys Con Pelo",
+              href: "/products/pantubotas-wallabys-con-pelo",
+            },
+            {
+              label: "Pantubotas Wallabys Sin Pelo",
+              href: "/products/pantubotas-wallabys-sin-pelo",
+            },
+            {
+              label: "Zuecos Birken forrados en Corderito Con Piel",
+              href: "/products/zuecos-birken-forrados-en-corderito-con-piel",
+            },
           ],
         },
         {
@@ -65,14 +380,39 @@ export default function Example() {
           label: "Calzado para Niños",
           href: "",
           subOptions: [
-            { label: "Ver Todos", href: "" },
-            { label: "Guillerminas Escolares - Pups", href: "" },
-            { label: "Zapatillas Escolares - Pups", href: "" },
-            { label: "Zapatillas Niños Tela Elastizada Animadas", href: "" },
-            { label: "Zapatillas Niños Tela Elastizada Lisas", href: "" },
-            { label: "Zapatillas para Niños Animadas", href: "" },
-            { label: "Zapatillas para Niños con Velcro", href: "" },
-            { label: "Zapatillas para Niños con Cordones", href: "" },
+            { label: "Ver Todo", href: "/collections/ninos" },
+            {
+              label: "Guillerminas Escolares - Pups",
+              href: "/products/guillerminas-escolares-pups",
+            },
+            {
+              label: "Zapatillas Escolares con Cordones - Pups",
+              href: "/products/zapatillas-escolares-con-cordones-pups",
+            },
+            {
+              label: "Zapatillas Escolares con Abrojo - Pups",
+              href: "/products/zapatillas-escolares-con-abrojo-pups",
+            },
+            {
+              label: "Zapatillas Animadas Elastizadas para Niños",
+              href: "/products/zapatillas-animadas-elastizadas-para-ninos",
+            },
+            {
+              label: "Zapatillas Elastizadas para Niños Lisas",
+              href: "/products/zapatillas-elastizadas-para-ninos-lisas",
+            },
+            {
+              label: "Zapatillas Animadas para Niños con Velcro",
+              href: "/products/zapatillas-animadas-para-ninos-con-velcro",
+            },
+            {
+              label: "Zapatillas para Niños con Velcro",
+              href: "/products/zapatillas-para-ninos-con-velcro",
+            },
+            {
+              label: "Zapatillas con Cordones - Pups",
+              href: "/products/zapatillas-con-cordones-pups",
+            },
           ],
         },
         {
@@ -80,18 +420,24 @@ export default function Example() {
           label: "Calzado de Tela",
           href: "",
           subOptions: [
-            { label: "Ver Todos", href: "" },
-            { label: "Chatitas de Tela Estilo Waps", href: "" },
-            { label: "Panchas de Tela Ultra Eslastizada", href: "" },
-            { label: "Zapatillas de Tela con Plataforma", href: "" },
-            { label: "Zapatillas de Tela - Julia", href: "" },
-            { label: "Zapatillas Guillerminas", href: "" },
-            { label: "Zapatillas Soft - Hombres", href: "" },
-            { label: "Zapatillas Soft - Mujer", href: "" },
-            { label: "Zapatillas Panchas de Tela", href: "" },
-            { label: "Zapatillas de Tela - Hombres", href: "" },
-            { label: "Zapatillas Tela Elastizada", href: "" },
-            { label: "Zuecos de Tela", href: "" },
+            { label: "Ver Todo", href: "/collections/tela" },
+            { label: "Zuecos de Tela", href: "/products/zuecos-de-tela" },
+            {
+              label: "Zapatillas Pancha de Tela",
+              href: "/products/zapatillas-pancha-de-tela",
+            },
+            {
+              label: "Zapatillas Guillerminas",
+              href: "/products/zapatillas-guillerminas",
+            },
+            {
+              label: "Pancha de Tela Ultraelastizada",
+              href: "/products/pancha-de-tela-ultraelastizada",
+            },
+            {
+              label: "Chatitas de Tela Estilo WAPS",
+              href: "/products/chatitas-de-tela-estilo-waps",
+            },
           ],
         },
         {
@@ -99,16 +445,7 @@ export default function Example() {
           label: "Sandalias De Cuero Ecológico",
           href: "",
           subOptions: [
-            { label: "Ver Todos", href: "" },
-            { label: "Sandalias De Cuero Ecologico", href: "" },
-            { label: "Sandalias De Cuero Ecologico", href: "" },
-            { label: "Sandalias De Cuero Ecologico", href: "" },
-            { label: "Sandalias De Cuero Ecologico", href: "" },
-            { label: "Sandalias De Cuero Ecologico", href: "" },
-            { label: "Sandalias De Cuero Ecologico", href: "" },
-            { label: "Sandalias De Cuero Ecologico", href: "" },
-            { label: "Zapatillas con Plataforma Tijuana", href: "" },
-            { label: "Zapatillas Cuero Ecologico", href: "" },
+            { label: "Ver Todo", href: "/collections/cuero-ecologico" },
           ],
         },
         {
@@ -116,16 +453,79 @@ export default function Example() {
           label: "Calzado de Cuero Vacuno",
           href: "",
           subOptions: [
-            { label: "Ver Todos", href: "" },
-            { label: "Borcegos Cuero Vacuno", href: "" },
-            { label: "Botas Cuero Vacuno", href: "" },
-            { label: "Chatitas Cuero Vacuno", href: "" },
-            { label: "Sandalias Cuero Vacuno", href: "" },
-            { label: "Sandalias Espanolas", href: "" },
-            { label: "Texanas Altas Cuero Vacuno", href: "" },
-            { label: "Texanas Cortas Cuero Vacuno", href: "" },
-            { label: "Zapatillas Cuero Vacuno Lunita", href: "" },
-
+            { label: "Ver Todos", href: "/collections/cuero-vacuno" },
+            {
+              label: "Chatitas Cuero Vacuno",
+              href: "/products/chatitas-cuero-vacuno",
+            },
+            {
+              label: "Zapatillas Cuero Vacuno Lunita",
+              href: "/products/zapatillas-cuero-vacuno-lunita",
+            },
+            {
+              label: "Texanas Cortas Cuero Vacuno",
+              href: "/products/texanas-cortas-cuero-vacuno",
+            },
+            {
+              label: "Texanas Altas Cuero Vacuno",
+              href: "/products/texanas-altas-cuero-vacuno",
+            },
+            {
+              label: "Sandalias Españolas",
+              href: "/products/sandalias-espanolas",
+            },
+            {
+              label: "Sandalias Cuero Vacuno",
+              href: "/products/sandalias-cuero-vacuno",
+            },
+            {
+              label: "Botas Cuero Vacuno",
+              href: "/products/botas-cuero-vacuno",
+            },
+            {
+              label: "Borcegos Cuero Vacuno",
+              href: "/products/borcegos-cuero-vacuno",
+            },
+          ],
+        },
+        {
+          value: "Zapatillas",
+          label: "Zapatillas",
+          href: "",
+          subOptions: [
+            { label: "Ver Todos", href: "/collections/zapatillas" },
+            {
+              label: "Zapatillas Tela Elastizada",
+              href: "/products/zapatillas-tela-elastizada",
+            },
+            {
+              label: "Zapatillas de Tela - Hombre",
+              href: "/products/zapatillas-de-tela-hombre",
+            },
+            {
+              label: "Zapatillas Soft - Mujer",
+              href: "/products/zapatillas-soft-mujer",
+            },
+            {
+              label: "Zapatillas Soft - Hombre",
+              href: "/products/zapatillas-soft-hombre",
+            },
+            {
+              label: "Zapatillas de Tela - Julia",
+              href: "/products/zapatillas-de-tela-julia",
+            },
+            {
+              label: "Zapatillas de Tela con Plataforma",
+              href: "/products/zapatillas-de-tela-con-plataforma",
+            },
+            {
+              label: "Zapatillas Cuero Ecológico",
+              href: "/products/zapatillas-cuero-ecologico",
+            },
+            {
+              label: "Zapatillas con Plataforma Tijuana",
+              href: "/products/zapatillas-con-plataforma-tijuana",
+            },
           ],
         },
         {
@@ -376,77 +776,77 @@ export default function Example() {
 
                 {filters.map((section) => (
                   <Disclosure
-                  key={section.id}
-                  as="div"
-                  className="border-t border-neutral-200 px-4 py-6"
-                >
-                  <h3 className="-mx-2 -my-3 flow-root">
-                    <DisclosureButton className="group flex w-full items-center justify-between bg-white px-2 py-3 text-neutral-400 hover:text-neutral-500">
-                      <span className="flex flex-row items-center font-medium text-neutral-800">
-                        {section.name}
-                      </span>
-                      <span className="ml-6 flex items-center">
-                        <PlusIcon
-                          aria-hidden="true"
-                          className="h-5 w-5 group-data-[open]:hidden"
-                        />
-                        <MinusIcon
-                          aria-hidden="true"
-                          className="h-5 w-5 [.group:not([data-open])_&]:hidden"
-                        />
-                      </span>
-                    </DisclosureButton>
-                  </h3>
-                  <DisclosurePanel className="pt-6">
-                    <div className="space-y-4">
-                      {section.options.map((option, optionIdx) =>
-                        option.subOptions ? (
-                          <Disclosure key={optionIdx} as="div" className="">
-                            <h4 className="-mx-2 -my-3 flow-root">
-                              <DisclosureButton className="group flex w-full items-center justify-between bg-white px-2 py-3 text-neutral-400 hover:text-neutral-500">
-                                <span className="text-sm text-neutral-800">
-                                  {option.label}
-                                </span>
-                                <span className="ml-6 flex items-center">
-                                  <PlusIcon
-                                    aria-hidden="true"
-                                    className="h-4 w-4 group-data-[open]:hidden"
-                                  />
-                                  <MinusIcon
-                                    aria-hidden="true"
-                                    className="h-4 w-4 [.group:not([data-open])_&]:hidden"
-                                  />
-                                </span>
-                              </DisclosureButton>
-                            </h4>
-                            <DisclosurePanel className="pt-4">
-                              <ul className="space-y-2">
-                                {option.subOptions.map((subOption) => (
-                                  <li key={subOption.href}>
-                                    <a
-                                      href={subOption.href}
-                                      className="text-sm text-neutral-600 hover:text-neutral-800"
-                                    >
-                                      {subOption.label}
-                                    </a>
-                                  </li>
-                                ))}
-                              </ul>
-                            </DisclosurePanel>
-                          </Disclosure>
-                        ) : (
-                          <a
-                            href={option.href}
-                            key={optionIdx}
-                            className="text-sm text-neutral-600 hover:text-neutral-800 block"
-                          >
-                            {option.label}
-                          </a>
-                        )
-                      )}
-                    </div>
-                  </DisclosurePanel>
-                </Disclosure>
+                    key={section.id}
+                    as="div"
+                    className="border-t border-neutral-200 px-4 py-6"
+                  >
+                    <h3 className="-mx-2 -my-3 flow-root">
+                      <DisclosureButton className="group flex w-full items-center justify-between bg-white px-2 py-3 text-neutral-400 hover:text-neutral-500">
+                        <span className="flex flex-row items-center font-medium text-neutral-800">
+                          {section.name}
+                        </span>
+                        <span className="ml-6 flex items-center">
+                          <PlusIcon
+                            aria-hidden="true"
+                            className="h-5 w-5 group-data-[open]:hidden"
+                          />
+                          <MinusIcon
+                            aria-hidden="true"
+                            className="h-5 w-5 [.group:not([data-open])_&]:hidden"
+                          />
+                        </span>
+                      </DisclosureButton>
+                    </h3>
+                    <DisclosurePanel className="pt-6">
+                      <div className="space-y-4">
+                        {section.options.map((option, optionIdx) =>
+                          option.subOptions ? (
+                            <Disclosure key={optionIdx} as="div" className="">
+                              <h4 className="-mx-2 -my-3 flow-root">
+                                <DisclosureButton className="group flex w-full items-center justify-between bg-white px-2 py-3 text-neutral-400 hover:text-neutral-500">
+                                  <span className="text-sm text-neutral-800">
+                                    {option.label}
+                                  </span>
+                                  <span className="ml-6 flex items-center">
+                                    <PlusIcon
+                                      aria-hidden="true"
+                                      className="h-4 w-4 group-data-[open]:hidden"
+                                    />
+                                    <MinusIcon
+                                      aria-hidden="true"
+                                      className="h-4 w-4 [.group:not([data-open])_&]:hidden"
+                                    />
+                                  </span>
+                                </DisclosureButton>
+                              </h4>
+                              <DisclosurePanel className="pt-4">
+                                <ul className="space-y-2">
+                                  {option.subOptions.map((subOption) => (
+                                    <li key={subOption.href}>
+                                      <a
+                                        href={subOption.href}
+                                        className="text-sm text-neutral-600 hover:text-neutral-800"
+                                      >
+                                        {subOption.label}
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </DisclosurePanel>
+                            </Disclosure>
+                          ) : (
+                            <a
+                              href={option.href}
+                              key={optionIdx}
+                              className="text-sm text-neutral-600 hover:text-neutral-800 block"
+                            >
+                              {option.label}
+                            </a>
+                          )
+                        )}
+                      </div>
+                    </DisclosurePanel>
+                  </Disclosure>
                 ))}
               </form>
             </div>
