@@ -37,17 +37,16 @@ const navigation = {
       ],
       sections: [
         {
-          id: "temporada-verano",
-          name: "Temporada Verano",
+          id: "prendas",
+          name: "Encontrá tu prenda ideal",
           items: [
-            { name: "Camisones", href: "#" },
-            { name: "Vestidos", href: "#" },
-            { name: "Remerones", href: "#" },
+            { name: "Remerones Animados", href: "/collections/remerones-animados" },
+            { name: "Buzos Animados", href: "/collections/remerones-animados" },
           ],
         },
         {
-          id: "temporada-invierno",
-          name: "Temporada Invierno",
+          id: "tejidos-artesanales",
+          name: "Tejidos Artesanales",
           items: [
             { name: "Buzos Frizados", href: "#" },
             { name: "Buzos Peluche", href: "#" },
@@ -84,10 +83,10 @@ const navigation = {
           items: [
             { name: "Temporada Invierno", href: "/collections/temporada-invierno" },
             { name: "Para Niños", href: "/collections/ninos" },
-            { name: "De Tela", href: "/collections/" },
-            { name: "De Sandalias De Cuero Ecológico", href: "/collections/cuero-ecologico" },
-            { name: "De Cuero Vacuno", href: "/collections/cuero-vacuno" },
-
+            { name: "Tela", href: "/collections/" },
+            { name: "Sandalias De Cuero Ecológico", href: "/collections/cuero-ecologico" },
+            { name: "Cuero Vacuno", href: "/collections/cuero-vacuno" },
+            { name: "Zapatillas", href: "/collections/zapatillas" },
           ],
         },
       ],
