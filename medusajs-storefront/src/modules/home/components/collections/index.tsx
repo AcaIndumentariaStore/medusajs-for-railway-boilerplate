@@ -11,6 +11,8 @@ import CalzadosDeNinos from "../../../../images/colecciones/CalzadosDeNinos.png"
 import SandaliasEcoCuero from "../../../../images/colecciones/SandaliasEcoCuero.png";
 import Zapatillas from "../../../../images/colecciones/Zapatillas.png";
 import UltimosPares from "../../../../images/colecciones/UltimosPares.png";
+import Remerones from "../../../../images/colecciones/Remerones.png";
+import Buzos from "../../../../images/colecciones/Buzos.png";
 
 function Index() {
   return (
@@ -206,6 +208,62 @@ function Index() {
           >
             <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
               Últimos pares
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
+
+      <a href="/collections/remerones-animados">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
+        >
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={Remerones.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
+          >
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+              Remerones animados
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
+
+      <a href="/collections/buzos-animados">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
+        >
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={Buzos.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
+          >
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+              Buzos animados
             </p>
           </BlurFade>
         </motion.div>
