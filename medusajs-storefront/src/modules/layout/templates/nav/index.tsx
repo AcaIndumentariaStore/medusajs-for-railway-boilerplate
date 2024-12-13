@@ -38,7 +38,7 @@ const navigation = {
       sections: [
         {
           id: "prendas",
-          name: "Encontrá tu prenda ideal",
+          name: "Encontrá tu Prenda Ideal",
           items: [
             { name: "Remerones Animados", href: "/collections/remerones-animados" },
             { name: "Buzos Animados", href: "/collections/remerones-animados" },
