@@ -73,7 +73,7 @@ export default async function Home({
   }
 
   const bestSellingCollection = collections.find(
-    (collection) => collection.handle === "mas-vendidos"
+    (collection) => collection.handle === "en-liquidacion"
   )
 
   const OffersCollection = collections.find(
@@ -96,14 +96,14 @@ export default async function Home({
             />
           )}
         </ul>
-        <ul className="flex flex-col gap-x-6">
+        {/* <ul className="flex flex-col gap-x-6">
           {OffersCollection && (
             <FeaturedProducts
               collections={[OffersCollection]}
               region={region}
             />
           )}
-        </ul>
+        </ul> */}
         <MarketingSpace />
         <SocialNetworks />
         <Collections />

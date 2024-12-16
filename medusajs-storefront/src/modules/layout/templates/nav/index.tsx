@@ -42,6 +42,10 @@ const navigation = {
           items: [
             { name: "Remerones Animados", href: "/collections/remerones-animados" },
             { name: "Buzos Animados", href: "/collections/remerones-animados" },
+            { name: "Buzos Oversize", href: "/collections/remerones-oversize" },
+            { name: "Buzos Peluche", href: "/collections/remerones-peluche" },
+            { name: "Sacos de Lana", href: "/collections/sacos-de-lana" },
+
           ],
         },
         {

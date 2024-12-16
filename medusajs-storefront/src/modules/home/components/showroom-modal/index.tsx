@@ -81,8 +81,7 @@ function Index() {
             <strong>Entre Ríos 2969, San Justo</strong>.
           </p>
           <p className="mt-2 text-gray-500">
-            <strong>Horarios de atención:</strong> Lunes a Viernes de 9:00 a
-            18:00 hrs y Sábados de 10:00 a 14:00 hrs.
+            <strong>Horarios de atención:</strong> Todos los dias de la semana, con horario a coordinar.
           </p>
 
           <div className="mt-6 flex flex-row items-center justify-center">
