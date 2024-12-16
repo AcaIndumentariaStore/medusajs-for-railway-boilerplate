@@ -3,7 +3,7 @@ import { Fragment, useState } from "react"
 import Image from "next/image"
 import { Dialog, Transition } from "@headlessui/react"
 
-import SizeGuideImage from "../../../../images/SizeGuideImage.png";
+import SizeGuideImage from "../../../../images/SizeGuideImage.png"
 
 export default function SizeGuideModal() {
   const [isOpen, setIsOpen] = useState(false)
@@ -86,13 +86,19 @@ export default function SizeGuideModal() {
                       <span className="font-semibold text-aca-strong-green">
                         tabla de talles
                       </span>{" "}
-                      de cada calzado esta en la{" "}
+                      de cada calzado está en la{" "}
                       <span className="font-semibold text-aca-strong-green">
-                        ultima imagen
+                        última imagen
                       </span>{" "}
                       del carrusel del producto.
                     </li>
                   </ul>
+
+                  {/* Advertencia */}
+                  <p className="mt-4 text-sm font-semibold text-red-600">
+                    Atención: Algunos colores pueden estar ligeramente
+                    distorsionados debido a las fotografías.
+                  </p>
 
                   <div className="mt-6 flex justify-center">
                     <div className="h-72 w-72 bg-gray-100 border border-gray-300 flex items-center justify-center">

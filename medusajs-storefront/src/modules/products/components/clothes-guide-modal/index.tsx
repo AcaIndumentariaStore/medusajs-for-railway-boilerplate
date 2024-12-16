@@ -62,18 +62,36 @@ export default function SizeGuideModal() {
                   <p className="text-sm text-gray-500 mb-4">
                     Consulta las medidas para nuestras prendas:
                   </p>
-                  
-                  <h4 className="font-semibold text-gray-800">Maxibuzos Animados</h4>
+
+                  <h4 className="font-semibold text-gray-800">
+                    Maxibuzos Animados
+                  </h4>
                   <ul className="mt-2 list-disc list-inside text-sm text-gray-500">
-                    <li><strong>Talle S:</strong> 70 cm largo, 54 cm ancho</li>
-                    <li><strong>Talle M/L:</strong> 72 cm largo, 56 cm ancho</li>
-                    <li><strong>Talle XL/XXL:</strong> 82 cm largo, 60 cm ancho</li>
+                    <li>
+                      <strong>Talle S:</strong> 70 cm largo, 54 cm ancho
+                    </li>
+                    <li>
+                      <strong>Talle M/L:</strong> 72 cm largo, 56 cm ancho
+                    </li>
+                    <li>
+                      <strong>Talle XL/XXL:</strong> 82 cm largo, 60 cm ancho
+                    </li>
                   </ul>
 
-                  <h4 className="mt-4 font-semibold text-gray-800">Remerones Animados</h4>
+                  <h4 className="mt-4 font-semibold text-gray-800">
+                    Remerones Animados
+                  </h4>
                   <ul className="mt-2 list-disc list-inside text-sm text-gray-500">
-                    <li><strong>Talle Único:</strong> 80 cm largo, 56 cm ancho</li>
+                    <li>
+                      <strong>Talle Único:</strong> 80 cm largo, 56 cm ancho
+                    </li>
                   </ul>
+
+                  {/* Advertencia */}
+                  <p className="mt-4 text-sm font-semibold text-red-600">
+                    Tener en cuenta: Algunos colores pueden variar levemente
+                    debido a las condiciones de la fotografía.
+                  </p>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
