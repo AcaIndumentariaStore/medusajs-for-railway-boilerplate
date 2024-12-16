@@ -332,6 +332,78 @@ export default function Example() {
             },
           ],
         },
+        {
+          value: "Buzos Oversize",
+          label: "Buzos Oversize",
+          href: "",
+          subOptions: [
+            { label: "Ver Todo", href: "/collections/buzos-oversize" },
+            {
+              label: "Maxibuzo Ovesize con capucha Hello Kitty",
+              href: "/products/maxibuzo-ovesize-con-capucha-hello-kitty",
+            },
+            {
+              label: "Maxibuzo Ovesize con capucha Looney Tunes",
+              href: "/products/maxibuzo-ovesize-con-capucha-looney-tunes",
+            },
+            {
+              label: "Maxibuzo Ovesize con capucha Mickey Mouse",
+              href: "/products/maxibuzo-ovesize-con-capucha-mickey-mouse",
+            },
+            {
+              label: "Maxibuzo Ovesize con capucha Mickey Mouse Blanco",
+              href: "/products/maxibuzo-ovesize-con-capucha-mickey-mouse-blanco",
+            },
+            {
+              label: "Maxibuzo Ovesize con capucha Mickey Mouse Retro",
+              href: "/products/maxibuzo-ovesize-con-capucha-mickey-mouse-retro",
+            },
+            {
+              label: "Maxibuzo Ovesize con capucha Mickey Mouse Rojo",
+              href: "/products/maxibuzo-ovesize-con-capucha-mickey-mouse-rojo",
+            },
+            {
+              label: "Maxibuzo Ovesize con capucha Minnie y Daisy",
+              href: "/products/maxibuzo-ovesize-con-capucha-minnie-y-daisy",
+            },
+            {
+              label: "Maxibuzo Ovesize con capucha Monsters Inc",
+              href: "/products/maxibuzo-ovesize-con-capucha-monsters-inc",
+            },
+            {
+              label: "Maxibuzo Ovesize con capucha Rugrats",
+              href: "/products/maxibuzo-ovesize-con-capucha-rugrats",
+            },
+            {
+              label: "Maxibuzo Ovesize con capucha Stitch",
+              href: "/products/maxibuzo-ovesize-con-capucha-stitch",
+            },
+          ],
+        },
+        {
+          value: "Buzos Peluche",
+          label: "Buzos Peluche",
+          href: "",
+          subOptions: [
+            { label: "Ver Todo", href: "/collections/buzos-peluche" },
+          ],
+        },
+        {
+          value: "Sacos de Lana",
+          label: "Sacos de Lana",
+          href: "",
+          subOptions: [
+            { label: "Ver Todo", href: "/collections/sacos-de-lana" },
+            {
+              label: "Sacos de Lana",
+              href: "/products/sacos-de-lana",
+            },
+            {
+              label: "Sacon de Lana",
+              href: "/products/sacon-de-lana",
+            },
+          ],
+        },
       ],
     },
     {
