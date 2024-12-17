@@ -15,51 +15,6 @@ import MobileMenu from "./mobile-menu"
 const navigation = {
   categories: [
     {
-      id: "prendas-de-vestir",
-      name: "Prendas de Vestir",
-      featured: [
-        {
-          name: "Ultimos Lanzamientos",
-          href: "/store?sortBy=created_at",
-          imageSrc:
-            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
-          imageAlt:
-            "",
-        },
-        {
-          name: "¡En Liquidacion! Hasta -50% OFF",
-          href: "/collections/en-liquidacion",
-          imageSrc:
-            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/Captura+de+pantalla+2024-12-02+110723.png",
-          imageAlt:
-            "",
-        },
-      ],
-      sections: [
-        {
-          id: "prendas",
-          name: "Encontrá tu Prenda Ideal",
-          items: [
-            { name: "Remerones Animados", href: "/collections/remerones-animados" },
-            { name: "Buzos Animados", href: "/collections/remerones-animados" },
-            { name: "Buzos Oversize", href: "/collections/remerones-oversize" },
-            { name: "Buzos Peluche", href: "/collections/remerones-peluche" },
-            { name: "Sacos de Lana", href: "/collections/sacos-de-lana" },
-
-          ],
-        },
-        {
-          id: "tejidos-artesanales",
-          name: "Tejidos Artesanales",
-          items: [
-            { name: "Buzos Frizados", href: "#" },
-            { name: "Buzos Peluche", href: "#" },
-            { name: "Sacos de Lana", href: "#" },
-          ],
-        },
-      ],
-    },
-    {
       id: "calzado",
       name: "Calzado",
       featured: [
@@ -68,16 +23,14 @@ const navigation = {
           href: "/store?sortBy=created_at",
           imageSrc:
             "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
-          imageAlt:
-            "",
+          imageAlt: "",
         },
         {
           name: "¡En Liquidacion! Hasta -50% OFF",
           href: "/collections/en-liquidacion",
           imageSrc:
-            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/Captura+de+pantalla+2024-12-02+110723.png",
-          imageAlt:
-            "",
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/EnLiquidacion.png",
+          imageAlt: "",
         },
       ],
       sections: [
@@ -85,12 +38,84 @@ const navigation = {
           id: "calzado",
           name: "Encontrá tu Calzado Ideal",
           items: [
-            { name: "Temporada Invierno", href: "/collections/temporada-invierno" },
+            {
+              name: "Temporada Invierno",
+              href: "/collections/temporada-invierno",
+            },
             { name: "Para Niños", href: "/collections/ninos" },
-            { name: "Tela", href: "/collections/" },
-            { name: "Sandalias De Cuero Ecológico", href: "/collections/cuero-ecologico" },
+            { name: "De Tela", href: "/collections/" },
+            {
+              name: "Sandalias De Cuero Ecológico",
+              href: "/collections/cuero-ecologico",
+            },
             { name: "Cuero Vacuno", href: "/collections/cuero-vacuno" },
             { name: "Zapatillas", href: "/collections/zapatillas" },
+          ],
+        },
+      ],
+    },
+    {
+      id: "prendas-de-vestir",
+      name: "Prendas de Vestir",
+      featured: [
+        {
+          name: "Ultimos Lanzamientos",
+          href: "/store?sortBy=created_at",
+          imageSrc:
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
+          imageAlt: "",
+        },
+        {
+          name: "¡En Liquidacion! Hasta -50% OFF",
+          href: "/collections/en-liquidacion",
+          imageSrc:
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/EnLiquidacion.png",
+          imageAlt: "",
+        },
+      ],
+      sections: [
+        {
+          id: "prendas",
+          name: "Encontrá tu prenda ideal",
+          items: [
+            { name: "Remerones Animados", href: "/collections/remerones-animados" },
+            { name: "Buzos Animados", href: "/collections/remerones-animados" },
+            { name: "Buzos Oversize", href: "/collections/buzos-oversize" },
+            { name: "Buzos Peluche", href: "/collections/buzos-peluche" },
+            { name: "Sacos de Lana", href: "/collections/sacos-de-lana" },
+          ],
+        },
+      ],
+    },
+    {
+      id: "tejidos-artesanales",
+      name: "Tejidos Artesanales",
+      featured: [
+        {
+          name: "Ultimos Lanzamientos",
+          href: "/store?sortBy=created_at",
+          imageSrc:
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
+          imageAlt: "",
+        },
+        {
+          name: "¡En Liquidacion! Hasta -50% OFF",
+          href: "/collections/en-liquidacion",
+          imageSrc:
+            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/EnLiquidacion.png",
+          imageAlt: "",
+        },
+      ],
+      sections: [
+        {
+          id: "tejidos-artesanales",
+          name: "Tejidos Artesanales",
+          items: [
+            { name: "1", href: "" },
+            { name: "2", href: "" },
+            { name: "3", href: "" },
+            { name: "4", href: "" },
+            { name: "5", href: "" },
           ],
         },
       ],
