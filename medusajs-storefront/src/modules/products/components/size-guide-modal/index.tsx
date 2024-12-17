@@ -101,7 +101,7 @@ export default function SizeGuideModal() {
                   </p>
 
                   <div className="mt-6 flex justify-center">
-                    <div className="h-72 w-72 bg-gray-100 border border-gray-300 flex items-center justify-center">
+                    <div className="h-44 w-44 bg-gray-100 border border-gray-300 flex items-center justify-center">
                       <Image src={SizeGuideImage} alt="Size Guide calzado" />
                     </div>
                   </div>
