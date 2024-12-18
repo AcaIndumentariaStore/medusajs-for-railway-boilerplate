@@ -131,7 +131,7 @@ export default async function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-y-2">
+            {/* <div className="flex flex-col gap-y-2">
               <span className="text-base font-semibold text-aca-green">
                 Tejidos Artesanales
               </span>
@@ -169,7 +169,7 @@ export default async function Footer() {
                   </LocalizedClientLink>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div className="flex flex-col gap-y-2">
               <span className="text-base font-semibold text-aca-green">
                 Redes Sociales

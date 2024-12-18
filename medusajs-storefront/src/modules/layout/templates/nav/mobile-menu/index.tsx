@@ -90,39 +90,39 @@ const navigation = {
         },
       ],
     },
-    {
-      id: "tejidos-artesanales",
-      name: "Tejidos",
-      featured: [
-        {
-          name: "Ultimos Lanzamientos",
-          href: "/store?sortBy=created_at",
-          imageSrc:
-            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
-          imageAlt: "",
-        },
-        {
-          name: "¡En Liquidacion! Hasta -50% OFF",
-          href: "/collections/en-liquidacion",
-          imageSrc:
-            "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/EnLiquidacion.png",
-          imageAlt: "",
-        },
-      ],
-      sections: [
-        {
-          id: "tejidos-artesanales",
-          name: "Tejidos Artesanales",
-          items: [
-            { name: "1", href: "" },
-            { name: "2", href: "" },
-            { name: "3", href: "" },
-            { name: "4", href: "" },
-            { name: "5", href: "" },
-          ],
-        },
-      ],
-    },
+    // {
+    //   id: "tejidos-artesanales",
+    //   name: "Tejidos",
+    //   featured: [
+    //     {
+    //       name: "Ultimos Lanzamientos",
+    //       href: "/store?sortBy=created_at",
+    //       imageSrc:
+    //         "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/UltimosLanzamientos.png",
+    //       imageAlt: "",
+    //     },
+    //     {
+    //       name: "¡En Liquidacion! Hasta -50% OFF",
+    //       href: "/collections/en-liquidacion",
+    //       imageSrc:
+    //         "https://medusa-prestige-server.s3.us-east-1.amazonaws.com/aca-indumentaria/EnLiquidacion.png",
+    //       imageAlt: "",
+    //     },
+    //   ],
+    //   sections: [
+    //     {
+    //       id: "tejidos-artesanales",
+    //       name: "Tejidos Artesanales",
+    //       items: [
+    //         { name: "1", href: "" },
+    //         { name: "2", href: "" },
+    //         { name: "3", href: "" },
+    //         { name: "4", href: "" },
+    //         { name: "5", href: "" },
+    //       ],
+    //     },
+    //   ],
+    // },
   ],
   pages: [
     { name: "Inicio", icon: Home01Icon, href: "/" },

@@ -210,7 +210,7 @@ export default function ProductActions({
             ? "Fuera de Stock"
             : "Agregar al carrito"}
         </Button>
-        <MobileActions
+        {/* <MobileActions
           product={product}
           variant={variant}
           region={region}
@@ -220,7 +220,7 @@ export default function ProductActions({
           handleAddToCart={handleAddToCart}
           isAdding={isAdding}
           show={!inView}
-        />
+        /> */}
       </div>
     </>
   )

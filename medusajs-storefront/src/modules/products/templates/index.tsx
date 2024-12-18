@@ -41,7 +41,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
           <div className="hidden sm:block">
             <ProductInfo product={product} />
           </div>
-          <div className="flex flex-row items-center justify-start space-x-1 md:space-x-2">
+          <div className="flex flex-row items-center justify-start space-x-3 md:space-x-2">
             <SizeGuideModal />
             <ClothesGuideModal />
           </div>

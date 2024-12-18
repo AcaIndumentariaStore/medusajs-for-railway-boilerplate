@@ -607,27 +607,27 @@ export default function Example() {
         },
       ],
     },
-    {
-      id: "tejidos-artesanales",
-      name: "Tejidos Artesanales",
-      options: [
-        {
-          value: "",
-          label: "Hombres",
-          href: "/prendas/hombres",
-        },
-        {
-          value: "",
-          label: "Mujeres",
-          href: "/prendas/mujeres",
-        },
-        {
-          value: "",
-          label: "Niños",
-          href: "/prendas/ninos",
-        },
-      ],
-    },
+    // {
+    //   id: "tejidos-artesanales",
+    //   name: "Tejidos Artesanales",
+    //   options: [
+    //     {
+    //       value: "",
+    //       label: "Hombres",
+    //       href: "/prendas/hombres",
+    //     },
+    //     {
+    //       value: "",
+    //       label: "Mujeres",
+    //       href: "/prendas/mujeres",
+    //     },
+    //     {
+    //       value: "",
+    //       label: "Niños",
+    //       href: "/prendas/ninos",
+    //     },
+    //   ],
+    // },
   ]
 
   const subCategories = [
