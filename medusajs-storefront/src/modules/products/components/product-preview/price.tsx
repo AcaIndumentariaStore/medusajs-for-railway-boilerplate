@@ -6,7 +6,7 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
     price.calculated_price.replace(/[^0-9.-]+/g, "")
   )
   const installmentPrice = (calculatedPrice / 3).toFixed(2)
-  const discountedPrice = (calculatedPrice * 0.8).toFixed(2)
+  const discountedPrice = (calculatedPrice * 0.85).toFixed(2)
 
   return (
     <div className="flex flex-col">
@@ -27,7 +27,7 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
           3 x <span className="text-aca-strong-green">${installmentPrice}</span>{" "}
           sin interés o
         </p>
-        <p className="font-semibold text-aca-strong-green text-xl">
+        <p className="font-semibold text-red-600 text-xl">
           ${discountedPrice} con Transferencia
         </p>
       </div>
