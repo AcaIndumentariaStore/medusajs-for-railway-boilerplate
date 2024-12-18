@@ -24,11 +24,11 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
       </Text>
       <div className="mt-1 text-base text-ui-fg-subtle">
         <p>
-          3 x <span className="text-aca-strong-green">${installmentPrice}</span>{" "}
-          sin interés o
+          3 cuotas sin interés de{" "}
+          <span className="text-aca-strong-green">${installmentPrice}</span> o
         </p>
         <p className="font-semibold text-red-600 text-xl">
-          ${discountedPrice} con Transferencia
+          ${discountedPrice} con Transferencia o Efectivo
         </p>
       </div>
     </div>
