@@ -12,9 +12,9 @@ export default function SizeGuideModal() {
     <>
       <button
         onClick={openModal}
-        className="text-gray-600 underline hover:text-aca-strong-green rounded-md"
+        className="text-gray-600 underline hover:text-aca-strong-green rounded-md text-left text-base"
       >
-        Guía de Talles Prendas de Vestir
+        Guía de Talles Prendas
       </button>
 
       {/* Modal */}

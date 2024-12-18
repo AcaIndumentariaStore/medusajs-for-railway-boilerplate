@@ -15,7 +15,7 @@ export default function SizeGuideModal() {
     <>
       <button
         onClick={openModal}
-        className="text-aca-grey underline hover:text-aca-strong-green rounded-md"
+        className="text-aca-grey underline hover:text-aca-strong-green rounded-md text-left text-base"
       >
         Guía de Talles Calzado
       </button>
