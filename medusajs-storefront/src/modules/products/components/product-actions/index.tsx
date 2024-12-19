@@ -13,9 +13,7 @@ import { addToCart } from "@modules/cart/actions"
 import Divider from "@modules/common/components/divider"
 import OptionSelect from "@modules/products/components/option-select"
 
-import MobileActions from "../mobile-actions"
 import ProductPrice from "../product-price"
-import SizeGuideModal from "../size-guide-modal"
 
 type ProductActionsProps = {
   product: PricedProduct
@@ -123,7 +121,16 @@ export default function ProductActions({
     })
 
     setIsAdding(false)
+
+    setIsModalVisible(true)
+
+    // Ocultar el modal después de 3 segundos
+    setTimeout(() => {
+      setIsModalVisible(false)
+    }, 3000000000000)
   }
+
+  const [isModalVisible, setIsModalVisible] = useState(false)
 
   return (
     <>
@@ -221,6 +228,53 @@ export default function ProductActions({
           isAdding={isAdding}
           show={!inView}
         /> */}
+
+        {isModalVisible && (
+          <div className="fixed top-0 right-0 z-[60] sm:max-w-xl w-full mx-auto p-6 mt-16">
+            <div className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm">
+              <div className="flex gap-x-5 items-center">
+                <svg
+                  className="hidden sm:block shrink-0 w-12 h-12 text-aca-green"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <div className="flex flex-col gap-3">
+                  <div>
+                    <h4 className="text-xl font-medium text-gray-800">
+                      Producto agregado al carrito
+                    </h4>
+                    <p className="text-base text-gray-600">
+                      ¡Sigue comprando o finaliza tu pedido!
+                    </p>
+                  </div>
+                  <div className="flex justify-end gap-4 mt-2">
+                    <button
+                      className="px-4 py-2 text-sm bg-aca-green text-white rounded-md hover:bg-aca-strong-green"
+                      onClick={() => (window.location.href = "/cart")}
+                    >
+                      ¡Finalizar compra!
+                    </button>
+                    <button
+                      className="px-4 py-2 text-sm text-gray-700 hover:underline"
+                      onClick={() => setIsModalVisible(false)}
+                    >
+                      Continuar comprando
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   )
