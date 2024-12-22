@@ -43,7 +43,7 @@ const navigation = {
               href: "/collections/temporada-invierno",
             },
             { name: "Para Niños", href: "/collections/ninos" },
-            { name: "De Tela", href: "/collections/" },
+            { name: "De Tela", href: "/collections/tela" },
             {
               name: "Sandalias De Cuero Ecológico",
               href: "/collections/cuero-ecologico",
