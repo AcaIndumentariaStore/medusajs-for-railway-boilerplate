@@ -13,6 +13,11 @@ export const metadata: Metadata = {
 export default async function PageLayout(props: { children: React.ReactNode }) {
   return (
     <>
+      <script
+        defer
+        src="https://acaindumentariaanalitycs.up.railway.app/script.js"
+        data-website-id="074a7895-0a9b-4be0-b083-dec499d40d2b"
+      />
       <ChatBotBubble />
       <Nav />
       {props.children}
