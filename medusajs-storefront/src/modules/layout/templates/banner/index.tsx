@@ -43,7 +43,7 @@ export default function Banner() {
           <SwiperSlide>
             {" "}
             <p className="text-center text-xs md:text-sm/6">
-              🌎 Al interior del país por solo $X 🌎
+              🌎 Al interior del país por solo $2800🌎
             </p>
           </SwiperSlide>
           <SwiperSlide>
@@ -80,7 +80,7 @@ export default function Banner() {
           <SwiperSlide>
             {" "}
             <p className="text-xs md:text-sm/6">
-              🌎 Al interior del país por solo $X 🌎
+              🌎 Al interior del país por solo $2800 🌎
             </p>
           </SwiperSlide>
           <SwiperSlide>
