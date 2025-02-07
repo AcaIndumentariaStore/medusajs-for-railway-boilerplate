@@ -82,7 +82,7 @@ export default async function Home({
 
   return (
     <>
-      <ShowroomModal />
+      {/* <ShowroomModal /> */}
       <Hero />
       <div className="flex items-center justify-center shadow-2xl shadow-neutral-100 border-t">
         <Benefits />
