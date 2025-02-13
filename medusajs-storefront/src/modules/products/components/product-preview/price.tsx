@@ -9,7 +9,7 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
   const discountedPrice = (calculatedPrice * 0.8).toFixed(2)
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col text-xl">
       {price.price_type === "sale" && (
         <Text className="line-through font-bold text-ui-fg-base mr-2">
           {price.original_price}
@@ -22,7 +22,7 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
       >
         {price.calculated_price}
       </Text>
-      <div className="mt-1 text-base text-ui-fg-subtle">
+      {/* <div className="mt-1 text-base text-ui-fg-subtle">
         <p>
           3 cuotas sin interés de{" "}
           <span className="text-aca-strong-green">${installmentPrice}</span> o
@@ -30,7 +30,7 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
         <p className="font-semibold text-red-600 text-xl">
           ${discountedPrice} con Transferencia o Efectivo
         </p>
-      </div>
+      </div> */}
     </div>
   )
 }
