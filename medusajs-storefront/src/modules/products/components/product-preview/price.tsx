@@ -9,7 +9,7 @@ export default async function PreviewPrice({ price }: { price: PriceType }) {
   const discountedPrice = (calculatedPrice * 0.8).toFixed(2)
 
   return (
-    <div className="flex flex-col text-xl">
+    <div className="flex flex-col text-lg">
       {price.price_type === "sale" && (
         <Text className="line-through font-bold text-ui-fg-base mr-2">
           {price.original_price}
