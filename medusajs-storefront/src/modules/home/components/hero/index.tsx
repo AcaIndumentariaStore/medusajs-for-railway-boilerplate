@@ -109,7 +109,7 @@ const Hero = () => {
                 <span className="text-aca-green">Showroom</span>
               </p>
             </div>
-            <div>
+            {/* <div>
               <div className="leading-none w-[370px] lg:w-[450px]">
                 <h3 className="text-[40px] lg:text-[50px] font-extrabold uppercase">
                   <span className="text-aca-green">20% Descuento</span>
@@ -129,7 +129,7 @@ const Hero = () => {
                 <span className="text-aca-green">10%</span> Adicional en{" "}
                 <span className="text-aca-green">Showroom</span>
               </p>
-            </div>
+            </div> */}
           </BlurFade>
         </SwiperSlide>
         <SwiperSlide className="relative w-full h-[75vh]">
