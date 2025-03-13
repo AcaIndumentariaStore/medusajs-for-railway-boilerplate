@@ -175,41 +175,9 @@ export default function Banner() {
               </div>
             </section>
           </SwiperSlide>
-          <SwiperSlide>
-            <section className="flex flex-row items-center justify-center pt-6 pb-10 gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="64"
-                height="64"
-                color="#a2d1ad"
-                fill="none"
-              >
-                <path
-                  d="M17.9583 8.38889C17.9583 6.24111 15.2907 4.5 12 4.5C8.7093 4.5 6.04167 6.24111 6.04167 8.38889C6.04167 10.5367 7.66667 11.7222 12 11.7222C16.3333 11.7222 18.5 12.8333 18.5 15.6111C18.5 18.3889 15.5899 19.5 12 19.5C8.41015 19.5 5.5 17.7589 5.5 15.6111"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M12.5 2.5V4.21M12.5 21.5V19.79"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <div>
-                <h3 className="text-lg text-aca-grey">20% de Descuento</h3>
-                <p className="text-xs font-light text-aca-grey">
-                Abonando en Efectivo o Transferencia y 10% de adicional en Showroom
-                </p>
-              </div>
-            </section>
-          </SwiperSlide>
         </Swiper>
       </div>
-      <div className="hidden lg:grid grid-cols-4 gap-x-12 items-center justify-center py-6 content-container">
+      <div className="hidden lg:grid grid-cols-3 gap-x-12 items-center justify-center py-6 content-container">
         <section className="flex flex-row items-center gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -340,36 +308,6 @@ export default function Banner() {
             <h3 className="text-lg text-aca-grey">Envíos a Todo el País</h3>
             <p className="text-xs font-light text-aca-grey">
               Recibí tu pedido en casa o retirá en nuestro Showroom
-            </p>
-          </div>
-        </section>
-        <section className="flex flex-row items-center gap-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="64"
-            height="64"
-            color="#a2d1ad"
-            fill="none"
-          >
-            <path
-              d="M17.9583 8.38889C17.9583 6.24111 15.2907 4.5 12 4.5C8.7093 4.5 6.04167 6.24111 6.04167 8.38889C6.04167 10.5367 7.66667 11.7222 12 11.7222C16.3333 11.7222 18.5 12.8333 18.5 15.6111C18.5 18.3889 15.5899 19.5 12 19.5C8.41015 19.5 5.5 17.7589 5.5 15.6111"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            />
-            <path
-              d="M12.5 2.5V4.21M12.5 21.5V19.79"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <div>
-            <h3 className="text-lg text-aca-grey">20% de Descuento</h3>
-            <p className="text-xs font-light text-aca-grey">
-              Abonando en Efectivo o Transferencia y 10% de adicional en Showroom
             </p>
           </div>
         </section>

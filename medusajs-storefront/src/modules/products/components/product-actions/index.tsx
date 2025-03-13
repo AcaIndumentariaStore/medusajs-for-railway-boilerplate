@@ -157,7 +157,7 @@ export default function ProductActions({
 
         <ProductPrice product={product} variant={variant} region={region} />
 
-        <div className="flex flex-row items-center space-x-1 mb-2">
+        {/* <div className="flex flex-row items-center space-x-1 mb-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -202,7 +202,7 @@ export default function ProductActions({
           <Text className="text-aca-green text-base">
             20% Descuento en Efectivo o Transferencia
           </Text>
-        </div>
+        </div> */}
 
         <Button
           onClick={handleAddToCart}
