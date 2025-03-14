@@ -58,6 +58,7 @@ const nextConfig = withStoreConfig({
         hostname:"medusa-prestige-server.s3.us-east-1.amazonaws.com",
       },
     ],
+    unoptimized: true,
   },
 })
 
