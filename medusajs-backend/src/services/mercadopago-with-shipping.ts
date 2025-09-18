@@ -1,4 +1,13 @@
-import { AbstractPaymentService, PaymentSessionStatus } from "@medusajs/medusa";
+import { 
+  AbstractPaymentService, 
+  PaymentSessionStatus, 
+  PaymentSessionResponse, 
+  Data, 
+  Cart, 
+  PaymentContext, 
+  PaymentSession, 
+  Payment 
+} from "@medusajs/medusa";
 import { humanizeAmount } from "medusa-core-utils";
 import MercadoPago from "mercadopago";
 
@@ -10,7 +19,7 @@ class MercadoPagoWithShippingService extends AbstractPaymentService {
   regionService_: any;
   manager_: any;
 
-  constructor(container, options: Record<string, unknown>) {
+  constructor(container: any, options: Record<string, unknown>) {
     super(container);
     this.options_ = options;
     this.mercadopago_ = MercadoPago;
@@ -18,11 +27,11 @@ class MercadoPagoWithShippingService extends AbstractPaymentService {
     this.manager_ = container.manager;
 
     this.mercadopago_.configure({
-      access_token: options.access_token
+      access_token: options.access_token as string
     });
   }
 
-  async createPayment(cart: any): Promise<Record<string, unknown>> {
+  async createPayment(cart: Cart & PaymentContext): Promise<PaymentSessionResponse> {
     const region_id = cart.region_id;
     const region = await this.regionService_.retrieve(region_id);
     const currency_code = region.currency_code;
@@ -66,13 +75,18 @@ class MercadoPagoWithShippingService extends AbstractPaymentService {
     const paymentIntent = await this.mercadopago_.preferences.create(preference);
 
     return {
-      preferenceId: paymentIntent.body.id,
-      url: paymentIntent.body.init_point,
-      urlSandbox: paymentIntent.body.sandbox_init_point
+      session_data: {
+        preferenceId: paymentIntent.body.id,
+        url: paymentIntent.body.init_point,
+        urlSandbox: paymentIntent.body.sandbox_init_point
+      },
+      update_requests: {
+        customer_metadata: {}
+      }
     };
   }
 
-  async updatePayment(paymentSessionData: Record<string, unknown>, cart: any): Promise<Record<string, unknown>> {
+  async updatePayment(paymentSessionData: Data, cart: Cart): Promise<Data> {
     const region_id = cart.region_id;
     const region = await this.regionService_.retrieve(region_id);
     const currency_code = region.currency_code;
@@ -113,7 +127,7 @@ class MercadoPagoWithShippingService extends AbstractPaymentService {
     };
 
     const paymentIntent = await this.mercadopago_.preferences.update({
-      id: paymentSessionData.preferenceId,
+      id: (paymentSessionData as any).preferenceId,
       ...preference
     });
 
@@ -123,69 +137,69 @@ class MercadoPagoWithShippingService extends AbstractPaymentService {
     };
   }
 
-  async retrievePayment(paymentData: Record<string, unknown>): Promise<Record<string, unknown>> {
-    const res = await this.mercadopago_.payment.get(paymentData.id);
+  async retrievePayment(paymentData: Data): Promise<Data> {
+    const res = await this.mercadopago_.payment.get((paymentData as any).id);
     return res.body;
   }
 
-  async authorizePayment(paymentSession: Record<string, unknown>, context: Record<string, unknown>): Promise<{ status: PaymentSessionStatus; data: Record<string, unknown> }> {
+  async authorizePayment(paymentSession: PaymentSession, context: Data): Promise<{ status: PaymentSessionStatus; data: Data }> {
     const status = await this.getStatus(context);
     return {
       data: {
         ...paymentSession.data,
-        id: context.id
+        id: (context as any).id
       },
       status: status
     };
   }
 
-  async capturePayment(payment: Record<string, unknown>): Promise<Record<string, unknown>> {
-    if (payment.data.captured === true) {
+  async capturePayment(payment: Payment): Promise<Data> {
+    if ((payment.data as any).captured === true) {
       return payment.data;
     }
     return payment.data;
   }
 
-  async refundPayment(payment: Record<string, unknown>, refundAmount: number): Promise<Record<string, unknown>> {
+  async refundPayment(payment: Payment, refundAmount: number): Promise<Data> {
     await this.mercadopago_.refund.create({
-      payment_id: payment.data.id,
+      payment_id: (payment.data as any).id,
       amount: Math.round(humanizeAmount(refundAmount, payment.currency_code))
     });
 
     return await this.retrievePayment(payment.data);
   }
 
-  async cancelPayment(payment: Record<string, unknown>): Promise<Record<string, unknown>> {
+  async cancelPayment(payment: Payment): Promise<Data> {
     const paymentData = await this.retrievePayment(payment.data);
-    const isCancelled = paymentData.status === "cancelled";
-    const isFullyRefund = paymentData.status === "refunded" && 
-      paymentData.transaction_amount === paymentData.transaction_amount_refunded;
+    const isCancelled = (paymentData as any).status === "cancelled";
+    const isFullyRefund = (paymentData as any).status === "refunded" && 
+      (paymentData as any).transaction_amount === (paymentData as any).transaction_amount_refunded;
 
     if (isCancelled || isFullyRefund) {
       return paymentData;
     }
 
-    if (payment.data.captured === true) {
+    if ((payment.data as any).captured === true) {
       await this.mercadopago_.refund.create({
-        payment_id: payment.data.id
+        payment_id: (payment.data as any).id
       });
     }
 
-    if (paymentData.status === "pending" || paymentData.status === "in_process") {
-      await this.mercadopago_.payment.cancel(payment.data.id);
+    if ((paymentData as any).status === "pending" || (paymentData as any).status === "in_process") {
+      await this.mercadopago_.payment.cancel((payment.data as any).id);
     }
 
     return await this.retrievePayment(payment.data);
   }
 
-  async deletePayment(paymentSession: Record<string, unknown>): Promise<Record<string, unknown>> {
+  async deletePayment(paymentSession: PaymentSession): Promise<void> {
     throw new Error("Method not implemented.");
   }
 
-  async getStatus(data: Record<string, unknown>): Promise<PaymentSessionStatus> {
+  async getStatus(data: Data): Promise<PaymentSessionStatus> {
     const paymentIntent = await this.retrievePayment(data);
     
-    switch (paymentIntent.status) {
+    switch ((paymentIntent as any).status) {
       case "approved":
       case "authorized":
         return PaymentSessionStatus.AUTHORIZED;
@@ -204,17 +218,17 @@ class MercadoPagoWithShippingService extends AbstractPaymentService {
     }
   }
 
-  async updatePaymentData(paymentSessionData: Record<string, unknown>, data: Record<string, unknown>): Promise<Record<string, unknown>> {
+  async updatePaymentData(paymentSessionData: Data, data: Data): Promise<Data> {
     return { ...paymentSessionData, ...data };
   }
 
-  async getPaymentData(paymentSession: Record<string, unknown>): Promise<Record<string, unknown>> {
+  async getPaymentData(paymentSession: PaymentSession): Promise<Data> {
     return await this.retrievePayment(paymentSession.data);
   }
 
   async notificationPayment(body: Record<string, unknown>): Promise<Record<string, unknown>> {
-    const paymentId = body.data.id;
-    const payment = await this.retrievePayment(body.data);
+    const paymentId = (body.data as any).id;
+    const payment = await this.retrievePayment(body.data as Data);
     return { ...body, payment };
   }
 }

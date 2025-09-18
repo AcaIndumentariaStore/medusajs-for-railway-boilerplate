@@ -51,12 +51,26 @@ cd medusajs-backend
 npm install
 ```
 
-### 3. Reiniciar el servidor
+### 3. Verificar que el build funciona
+```bash
+npm run build
+```
+
+### 4. Reiniciar el servidor
 ```bash
 npm run dev
 # o
 npm run build && npm start
 ```
+
+## Correcciones realizadas
+
+### Problemas de TypeScript solucionados:
+- ✅ Tipos correctos para `createPayment` (retorna `PaymentSessionResponse`)
+- ✅ Tipos correctos para `updatePayment` (retorna `Data`)
+- ✅ Tipos correctos para `authorizePayment`, `capturePayment`, `refundPayment`, `cancelPayment`
+- ✅ Propiedad `customer_metadata` agregada a `update_requests`
+- ✅ Casting de tipos con `as any` donde es necesario para compatibilidad
 
 ### 4. Probar la funcionalidad
 1. Agregar productos al carrito
