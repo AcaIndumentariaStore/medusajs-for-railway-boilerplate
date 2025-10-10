@@ -72,7 +72,7 @@ const plugins = [
     },
   },
   {
-    resolve: `mercadopago-provider`,
+    resolve: `@minskylab/medusa-payment-mercadopago`,
     options: {
       access_token: process.env.MERCADOPAGO_ACCESS_TOKEN,
       success_backurl: process.env.MERCADOPAGO_SUCCESS_BACKURL,
