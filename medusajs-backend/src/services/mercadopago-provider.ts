@@ -1,5 +1,7 @@
 import { AbstractPaymentProcessor, PaymentProcessorContext, PaymentProcessorError, PaymentProcessorSessionResponse, PaymentSessionStatus, Cart } from "@medusajs/medusa"
-import { MercadoPagoConfig, Preference } from 'mercadopago'
+
+// Usar el SDK de Mercadopago de la forma correcta
+const mercadopago = require('mercadopago')
 
 interface MercadoPagoOptions {
   access_token: string
@@ -15,14 +17,15 @@ interface CartContext {
 class MercadopagoProviderService extends AbstractPaymentProcessor {
   static identifier = "mercadopago"
   
-  protected client_: any
   protected options_: MercadoPagoOptions
 
   constructor(container: any, options: MercadoPagoOptions) {
     super(container)
     this.options_ = options
-    this.client_ = new MercadoPagoConfig({
-      accessToken: options.access_token,
+    
+    // Configurar Mercadopago con el access token
+    mercadopago.configure({
+      access_token: options.access_token,
     })
   }
 
@@ -65,8 +68,6 @@ class MercadopagoProviderService extends AbstractPaymentProcessor {
       }
 
       // Crear preference de Mercadopago
-      const preference = new Preference(this.client_)
-      
       const preferenceData = {
         items: items,
         back_urls: {
@@ -74,7 +75,7 @@ class MercadopagoProviderService extends AbstractPaymentProcessor {
           failure: this.options_.success_backurl,
           pending: this.options_.success_backurl,
         },
-        auto_return: 'approved' as const,
+        auto_return: 'approved',
         notification_url: this.options_.webhook_url,
         external_reference: resource_id,
         payer: customer ? {
@@ -83,15 +84,16 @@ class MercadopagoProviderService extends AbstractPaymentProcessor {
         } : undefined,
       }
 
-      const result = await preference.create({ body: preferenceData })
+      const result = await mercadopago.preferences.create(preferenceData)
 
       return {
         session_data: {
-          preferenceId: result.id,
-          init_point: result.init_point,
+          preferenceId: result.body.id,
+          init_point: result.body.init_point,
         },
       }
     } catch (error: any) {
+      console.error('Error creating Mercadopago preference:', error)
       return {
         error: error.message || "Error al iniciar pago",
         code: error.code || "unknown",
