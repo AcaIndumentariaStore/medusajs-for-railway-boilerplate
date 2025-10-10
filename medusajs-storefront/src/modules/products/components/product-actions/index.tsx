@@ -259,7 +259,7 @@ export default function ProductActions({
                   <div className="flex justify-end gap-4 mt-2">
                     <button
                       className="px-4 py-2 text-sm bg-aca-green text-white rounded-md hover:bg-aca-strong-green"
-                      onClick={() => (window.location.href = "/cart")}
+                      onClick={() => (window.location.href = "/cart/cart")}
                     >
                       ¡Finalizar compra!
                     </button>
