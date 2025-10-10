@@ -1,0 +1,39 @@
+diff --git a/node_modules/@minskylab/medusa-payment-mercadopago/dist/services/mercadopago.js b/node_modules/@minskylab/medusa-payment-mercadopago/dist/services/mercadopago.js
+index f109b1c..751c35a 100644
+--- a/node_modules/@minskylab/medusa-payment-mercadopago/dist/services/mercadopago.js
++++ b/node_modules/@minskylab/medusa-payment-mercadopago/dist/services/mercadopago.js
+@@ -202,6 +202,17 @@ var MercadopagoProviderService = /*#__PURE__*/function (_AbstractPaymentServi) {
+                     description: item.description
+                   };
+                 });
++                // FIX: Agregar shipping_total como item separado
++                  if (cart.shipping_total && cart.shipping_total > 0) {
++                    items.push({
++                      id: 'shipping',
++                      title: 'Costo de Envío',
++                      description: 'Envío y manejo',
++                      quantity: 1,
++                      currency_id: currency_code.toUpperCase(),
++                      unit_price: (0, _medusaCoreUtils.humanizeAmount)(cart.shipping_total, currency_code)
++                    });
++                  }
+                 preference = {
+                   items: items
+                   /**REQUIRED */
+@@ -321,6 +332,16 @@ var MercadopagoProviderService = /*#__PURE__*/function (_AbstractPaymentServi) {
+                     description: item.description
+                   };
+                 });
++                if (cart.shipping_total && cart.shipping_total > 0) {
++                  items.push({
++                    id: 'shipping',
++                    title: 'Costo de Envío',
++                    description: 'Envío y manejo',
++                    quantity: 1,
++                    currency_id: currency_code.toUpperCase(),
++                    unit_price: (0, _medusaCoreUtils.humanizeAmount)(cart.shipping_total, currency_code)
++                  });
++                }
+                 preference = {
+                   items: items,
+                   payer: {
