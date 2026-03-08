@@ -35,18 +35,10 @@ const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
 const ADMIN_APP_PORT = process.env.PORT || 7001;
 
-const fileServicePlugin = {
-  resolve: `@medusajs/file-local`,
-  options: {
-    upload_dir: "uploads",
-    backend_url: "https://acaindumentaria.up.railway.app",
-  },
-};
 
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
-  fileServicePlugin,
   {
     resolve: "@medusajs/admin",
     /** @type {import('@medusajs/admin').PluginOptions} */
@@ -71,14 +63,14 @@ const plugins = [
       prefix: process.env.S3_PREFIX,
     },
   },
-  {
+  ...(process.env.MERCADOPAGO_ACCESS_TOKEN ? [{
     resolve: `@minskylab/medusa-payment-mercadopago`,
     options: {
       access_token: process.env.MERCADOPAGO_ACCESS_TOKEN,
       success_backurl: process.env.MERCADOPAGO_SUCCESS_BACKURL,
       webhook_url: process.env.MERCADOPAGO_WEBHOOK_URL,
     },
-  },
+  }] : []),
   {
     resolve: `@rsc-labs/medusa-store-analytics`,
     options: {
