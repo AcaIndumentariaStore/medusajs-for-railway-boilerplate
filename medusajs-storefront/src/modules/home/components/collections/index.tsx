@@ -16,7 +16,8 @@ import Buzos from "../../../../images/colecciones/Buzos.png"
 import BuzosOversize from "../../../../images/colecciones/BuzosOversize.png"
 import BuzosPeluche from "../../../../images/colecciones/BuzosPeluche.png"
 import SacosDeLana from "../../../../images/colecciones/SacosDeLana.png"
-import SaconesDeLana from "../../../../images/colecciones/SaconesDeLana.png"
+import BotasCueroVacuno from "../../../../images/colecciones/BotasCueroVacuno.jpeg"
+// import SaconesDeLana from "../../../../images/colecciones/SaconesDeLana.png"
 
 function Index() {
   return (
@@ -24,6 +25,34 @@ function Index() {
       id="colecciones"
       className="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-12 content-container py-12"
     >
+      <a href="/collections/botas-de-cuero-vacuno">
+        <motion.div
+          whileHover={{
+            scale: 1.02,
+            translateY: -5,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 10 }}
+          className="relative flex flex-col items-center justify-center"
+        >
+          <div className="relative flex flex-row items-center justify-center h-72 lg:h-96 w-full border bg-aca-beige border-neutral-200 rounded-md">
+            <img
+              src={BotasCueroVacuno.src}
+              alt=""
+              className="object-cover w-full h-72 lg:h-96 select-none rounded-md"
+            />
+          </div>
+          <BlurFade
+            delay={0.5}
+            className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center w-full"
+          >
+            <p className="px-2 py-3 font-extrabold text-lg lg:text-xl text-center text-white mt-3 rounded-md uppercase w-full">
+              Botas de Cuero 
+            </p>
+          </BlurFade>
+        </motion.div>
+      </a>
+
       <a href="/collections/tela">
         <motion.div
           whileHover={{

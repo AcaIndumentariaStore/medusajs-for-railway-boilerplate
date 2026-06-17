@@ -38,6 +38,7 @@ const navigation = {
           id: "calzado",
           name: "Encontrá tu Calzado Ideal",
           items: [
+            { name: "Botas de Cuero Vacuno", href: "/collections/botas-de-cuero-vacuno" },
             {
               name: "Temporada Invierno",
               href: "/collections/temporada-invierno",
