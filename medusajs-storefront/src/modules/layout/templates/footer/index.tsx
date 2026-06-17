@@ -84,6 +84,14 @@ export default async function Footer() {
                 <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
                   <LocalizedClientLink
                     className={clx("hover:text-ui-fg-base")}
+                    href={`/collections/botas-de-cuero-vacuno`}
+                  >
+                    Botas de Cuero Vacuno
+                  </LocalizedClientLink>
+                </li>
+                <li className="flex flex-col gap-2 text-ui-fg-subtle txt-small">
+                  <LocalizedClientLink
+                    className={clx("hover:text-ui-fg-base")}
                     href={`/collections/temporada-invierno`}
                   >
                     Temporada Invierno

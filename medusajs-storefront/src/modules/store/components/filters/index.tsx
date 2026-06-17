@@ -411,6 +411,14 @@ export default function Example() {
       name: "Calzados",
       options: [
         {
+          value: "Botas de Cuero Vacuno",
+          label: "Botas de Cuero Vacuno",
+          href: "",
+          subOptions: [
+            { label: "Ver Todo", href: "/collections/botas-de-cuero-vacuno" },
+          ],
+        },
+        {
           value: "Temporada Invierno",
           label: "Temporada Invierno",
           href: "",
